@@ -1,0 +1,802 @@
+/*
+@media (max-width: 1605px) {
+  .manual__image {
+    img {
+      width: 75%;
+      right: -122px;
+    }
+
+    .manual__pdf-about {
+      right: -97px;
+    }
+  }
+}
+
+@media (max-width: 1485px) {
+  .manual__image {
+    img {
+      width: 65%;
+      right: -22px;
+    }
+
+    .manual__pdf-about {
+      right: -11px;
+    }
+  }
+}
+
+!*@media (max-width: 1480px) {
+  .sidebar .sidebar__menu {
+    padding-bottom: 15.5%;
+  }
+}*!
+
+@media (max-width: 1285px) {
+  .manual__image {
+    img {
+      width: 55%;
+      right: 106px;
+    }
+
+    .manual__pdf-about {
+      right: 108px;
+    }
+  }
+}
+
+@media (max-width: 1175px) {
+  .main__wrapper {
+    grid-template-columns: 30.21% 66.2%;
+  }
+
+  .sidebar .sidebar__menu {
+    padding-right: 25px;
+  }
+}
+
+@media (max-width: 1095px) {
+
+  .menu {
+    padding-bottom: 10px;
+
+    ul li {
+      padding: 0 7px 0 12px;
+    }
+  }
+
+  .sidebar {
+    .sidebar__menu {
+      padding-right: 0;
+    }
+
+    .sidebar__top {
+      padding-right: 30px;
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  .content {
+    .content__items {
+      .content__item-btn {
+        a {
+          padding: 13px 46px 13px 18px;
+          &::before {
+            right: 1em;
+          }
+        }
+      }
+    }
+
+    .content__advert .content__advert-right .content__advert-bg {
+      width: 100%;
+    }
+
+    .content__items .content__item {
+      padding: 50px 0 40px;
+    }
+  }
+  .sidebar .sidebar__menu {
+    padding-bottom: 15%;
+    padding-left: 20px;
+    padding-right: 3px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .header__address,
+  .footer__address,
+  .header__phone,
+  .footer__phone {
+    padding-left: 25px;
+  }
+
+  .header__content {
+    padding-right: 5px;
+  }
+}
+
+@media (max-width: 845px) {
+  .footer__phone {
+    padding-right: 0;
+  }
+  .header__profile {
+    .header__profile-login {
+      padding-right: 4px;
+    }
+
+    .header__profile-registration {
+      padding-left: 11px;
+    }
+  }
+
+  .header__phone {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .header__logo {
+    a {
+      padding-left: 45px;
+
+      &::before {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}*/
+
+@media (max-width: 1821px) {
+  .sidebar {
+    .sidebar__menu {
+      padding-bottom: 4.1em;
+      padding-right: 4em;
+    }
+  }
+
+  .form__left {
+    padding-right: 5em;
+  }
+  .form__right .form__bg {
+    width: 81%;
+  }
+}
+
+@media (max-width: 1812px) {
+  .form__left {
+    padding-right: 5.1em;
+  }
+}
+
+@media (max-width: 1700px) {
+  .sidebar {
+    .sidebar__menu {
+      padding-bottom: 4.8em;
+      padding-right: 6em;
+    }
+  }
+  .shoecover-certificate__image img {
+    width: 24.74%;
+  }
+
+  .manual__description {
+    padding-right: 9em;
+  }
+}
+
+@media (max-width: 1606px) {
+  .content .content__advert .content__advert-right .content__advert-bg {
+    top: 10%;
+    right: 6%;
+    width: 93%;
+  }
+
+  .form__right .form__bg {
+    width: 71%;
+  }
+}
+
+@media (max-width: 1585px) {
+  .price-shoecover__content {
+    padding-bottom: 10em;
+  }
+
+  .price-shoecover__image img {
+    width: 37.5%;
+  }
+}
+
+@media (max-width: 1576px) {
+  .sidebar {
+    .sidebar__menu {
+      padding-bottom: 5.4em;
+      padding-right: 7.5em;
+    }
+  }
+}
+
+@media (max-width: 1542px) {
+  .manual__image {
+    img {
+      right: -2.39em;
+      width: 60%;
+    }
+
+    .manual__pdf-about {
+      right: 0;
+    }
+  }
+}
+
+@media (max-width: 1514px) {
+  .sidebar {
+    .sidebar__menu {
+      padding-bottom: 6.1em;
+      padding-right: 8em;
+    }
+  }
+  .content .content__advert .content__advert-right .content__advert-bg {
+    width: 85%;
+  }
+
+  .manual__description {
+    padding-right: 13em;
+  }
+}
+
+@media (max-width: 1397px) {
+  .sidebar {
+    .sidebar__menu {
+      padding-right: 11em;
+    }
+  }
+
+  .form__right .form__bg {
+    width: 65%;
+  }
+}
+
+@media (max-width: 1391px) {
+  .sidebar {
+    .sidebar__menu {
+      padding-bottom: 6.8em;
+    }
+  }
+
+  .content .content__advert .content__advert-right .content__advert-bg {
+    top: 8%;
+    right: 7%;
+    width: 83%;
+  }
+
+  .shoecover-certificate__image img {
+    left: 15.57em;
+    width: 20.74%;
+  }
+}
+
+@media (max-width: 1338px) {
+  .manual__description {
+    padding-right: 19em;
+  }
+}
+
+@media (max-width: 1334px) {
+  .content .content__advert .content__advert-left {
+    padding-right: 10em;
+  }
+}
+
+@media (max-width: 1329px) {
+  .sidebar {
+    .sidebar__menu {
+      padding-bottom: 7.4em;
+    }
+  }
+}
+
+@media (max-width: 1298px) {
+  .manual__image {
+    img {
+      right: 8.61em;
+      width: 54%;
+    }
+    .manual__pdf-about {
+      right: 11em;
+    }
+  }
+}
+
+@media (max-width: 1268px) {
+  .sidebar {
+    .sidebar__menu {
+      padding-bottom: 8.2em;
+      padding-right: 13em;
+    }
+  }
+  .content .content__advert .content__advert-right .content__advert-bg {
+    top: 14%;
+    right: 28%;
+    width: 70%;
+  }
+}
+
+@media (max-width: 1206px) {
+  .sidebar {
+    .sidebar__menu {
+      padding-bottom: 8.7em;
+    }
+  }
+}
+
+@media (max-width: 1144px) {
+  .sidebar {
+    .sidebar__menu {
+      padding-bottom: 9.5em;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .sidebar {
+    .sidebar__menu {
+      padding-bottom: 8.85em;
+    }
+  }
+  .content .content__advert .content__advert-right .content__advert-bg {
+    top: 18%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .sidebar {
+    .sidebar__menu {
+      padding-bottom: 9em;
+      padding-right: 12em;
+    }
+  }
+
+  .content .content__advert .content__advert-left {
+    padding-right: 8em;
+  }
+}
+
+@media (max-width: 896px) {
+  .manual__description {
+    padding-right: 16em;
+  }
+}
+
+@media (max-width: 870px) {
+  .sidebar {
+    .sidebar__menu {
+      padding-bottom: 8.5em;
+      padding-right: 11em;
+    }
+  }
+}
+
+@media (max-width: 803px) {
+  .sidebar {
+    .sidebar__menu {
+      padding-bottom: 8.2em;
+      padding-right: 10em;
+    }
+  }
+
+  .content .content__advert .content__advert-left {
+    padding-right: 6em;
+  }
+}
+
+@media (max-width: 774px) {
+  .sidebar {
+    .sidebar__menu {
+      padding-bottom: 8.5em;
+    }
+  }
+}
+
+@media (max-width: 754px) {
+  .sidebar {
+    .sidebar__menu {
+      padding-bottom: 8.2em;
+    }
+  }
+}
+
+@media (max-width: 737px) {
+  .manual__image {
+    img {
+      right: 3.61em;
+    }
+    .manual__pdf-about {
+      right: 6em;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .sidebar {
+    .sidebar__menu {
+      padding-bottom: 7.7em;
+    }
+  }
+}
+
+@media (max-width: 693px) {
+  .sidebar {
+    .sidebar__menu {
+      padding-bottom: 7.3em;
+    }
+  }
+
+  .manual__description {
+    padding-right: 15em;
+  }
+}
+
+@media (max-width: 665px) {
+  .sidebar {
+    .sidebar__menu {
+      padding-bottom: 7em;
+      padding-right: 9em;
+    }
+  }
+
+  .manual__description {
+    padding-right: 13em;
+  }
+}
+
+@media (max-width: 596px) {
+  .sidebar {
+    .sidebar__menu {
+      padding-bottom: 6.8em;
+    }
+  }
+}
+
+@media (max-width: 578px) {
+  .sidebar {
+    .sidebar__menu {
+      padding-right: 8em;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .sidebar {
+    .sidebar__menu {
+      padding-bottom: 6.5em;
+    }
+  }
+
+  .manual__description {
+    padding-right: 11em;
+  }
+}
+
+@media (max-width: 549px) {
+  .sidebar {
+    .sidebar__menu {
+      padding-bottom: 6em;
+    }
+  }
+}
+
+@media (max-width: 527px) {
+  .sidebar {
+    .sidebar__menu {
+      padding-bottom: 6.8em;
+    }
+  }
+
+  .content .content__advert .content__advert-left {
+    padding-right: 4em;
+  }
+
+  .content .content__advert .content__advert-right .content__advert-bg {
+    top: 22%;
+  }
+}
+
+@media (max-width: 516px) {
+  .sidebar {
+    .sidebar__menu {
+      padding-bottom: 6.5em;
+      padding-right: 7em;
+    }
+  }
+
+  .manual__content {
+    padding-top: 2em;
+  }
+}
+
+@media (max-width: 504px) {
+  .manual__image {
+    img {
+      right: .61em;
+    }
+    .manual__pdf-about {
+      right: 2em;
+    }
+  }
+  .manual__content {
+    width: 50%;
+    padding-right: 2em;
+  }
+}
+
+@media (max-width: 500px) {
+  .sidebar {
+    .sidebar__menu {
+      padding-bottom: 5.8em;
+    }
+  }
+
+  .price-shoecover__content {
+    padding-right: 1em;
+  }
+
+  .price-shoecover__image img {
+    width: 40.5%;
+  }
+
+  .manual__description {
+    padding-right: 9em;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    .sidebar__menu {
+      padding-bottom: 5.3em;
+    }
+  }
+  .price-shoecover__content {
+    width: 60%;
+    padding-right: 10em;
+    padding-top: 12em;
+  }
+
+  .price-shoecover__image {
+    width: 40%;
+  }
+}
+
+@media (max-width: 463px) {
+  .sidebar {
+    .sidebar__menu {
+      padding-bottom: 6.5em;
+      padding-right: 5em;
+    }
+  }
+
+  .shoecover-certificate__content {
+    padding-right: 11em;
+  }
+}
+
+@media (max-width: 459px) {
+  .price-shoecover__content {
+    padding-right: 8em;
+  }
+}
+
+@media (max-width: 455px) {
+  .sidebar {
+    .sidebar__menu {
+      padding-bottom: 5.8em;
+    }
+  }
+}
+
+@media (max-width: 446px) {
+  .sidebar {
+    .sidebar__menu {
+      padding-bottom: 5.4em;
+    }
+  }
+}
+
+@media (max-width: 442px) {
+  .manual__image {
+    img {
+      right: 0;
+    }
+    .manual__pdf-about {
+      right: 1em;
+    }
+  }
+  .manual__content {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 430px) {
+  .sidebar {
+    .sidebar__menu {
+      padding-bottom: 5em;
+    }
+  }
+  .content .content__advert .content__advert-left {
+    padding-right: 2em;
+  }
+}
+
+@media (max-width: 426px) {
+  .price-shoecover__content {
+    padding-right: 6em;
+  }
+
+  .manual__description {
+    padding-right: 7em;
+  }
+}
+
+@media (max-width: 414px) {
+  .sidebar {
+    .sidebar__menu {
+      padding-bottom: 4.5em;
+    }
+  }
+  .content .content__advert .content__advert-right .content__advert-bg {
+    top: 26%;
+  }
+
+  .shoecover-certificate__content {
+    padding-right: 8em;
+  }
+}
+
+@media (max-width: 410px) {
+  .sidebar {
+    .sidebar__menu {
+      padding-bottom: 4em;
+    }
+  }
+}
+
+@media (max-width: 407px) {
+  .manual__image {
+    img {
+      width: 50%;
+    }
+  }
+  .manual__content {
+    width: 60%;
+  }
+}
+
+@media (max-width: 403px) {
+  .sidebar {
+    .sidebar__menu {
+      padding-bottom: 5.6em;
+    }
+  }
+}
+
+@media (max-width: 396px) {
+  .price-shoecover__content {
+    padding-right: 4em;
+  }
+}
+
+@media (max-width: 390px) {
+  .sidebar {
+    .sidebar__menu {
+      padding-bottom: 5em;
+      padding-right: 3em;
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .sidebar {
+    .sidebar__menu {
+      padding-bottom: 4.5em;
+    }
+  }
+
+  .manual__description {
+    padding-right: 6em;
+  }
+}
+
+@media (max-width: 370px) {
+  .header__content {
+    padding-right: 0;
+  }
+
+  .header__phone {
+    padding-right: 0;
+    padding-top: 0;
+  }
+
+  .header__profile {
+    .header__profile-login {
+      padding-right: 0.1em;
+    }
+
+    .header__profile-registration {
+      padding-left: 0.7em;
+    }
+  }
+  .sidebar {
+    .sidebar__menu {
+      padding-bottom: 3.7em;
+      padding-right: 4em;
+    }
+  }
+
+  .shoecover-certificate__content {
+    padding-right: 5em;
+  }
+}
+
+@media (max-width: 356px) {
+  .manual__image {
+    img {
+      width: 45%;
+    }
+  }
+  .manual__content {
+    width: 70%;
+  }
+}
+
+@media (max-width: 349px) {
+  .manual__description {
+    padding-right: 4em;
+  }
+}
+
+@media (max-width: 345px) {
+  .sidebar {
+    .sidebar__menu {
+      padding-bottom: 3em;
+    }
+  }
+
+  .content .content__advert .content__advert-left {
+    padding-right: 1em;
+  }
+}
+
+@media (max-width: 342px) {
+  .sidebar {
+    .sidebar__menu {
+      padding-bottom: 4.5em;
+      padding-right: 1em;
+    }
+  }
+}
+
+
+@media (max-width: 330px) {
+  .sidebar {
+    .sidebar__menu {
+      padding-bottom: 4em;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .sidebar {
+    .sidebar__menu {
+      padding-bottom: 3.5em;
+    }
+  }
+
+  .form__left {
+    padding-right: 0.1em;
+  }
+
+  .form__right .form__bg {
+    width: 95%;
+  }
+}

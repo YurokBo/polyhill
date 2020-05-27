@@ -1,0 +1,99 @@
+@import "vars";
+@import "mixins";
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  /*font-family: 'SF UI Display Bold';*/
+  /*font-family: 'SF UI Display Medium';*/
+  font-family: 'SF UI Display Regular';
+  font-weight: 400;
+  @include adaptiv-font(16, 4);
+  line-height: 1.44em;
+  letter-spacing: 0.070em;
+  color: $main-font-color;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+}
+
+.container {
+  max-width: 1250px;
+  padding: 0 5px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+.default-btn {
+  font-family: 'SF UI Display Bold';
+  font-weight: 700;
+  line-height: 1.65em;
+  @include adaptiv-font(14, 4);
+  letter-spacing: 0.140em;
+  color: $btn-title-color;
+  text-transform: uppercase;
+  a {
+    padding: 1.1em 2.4em 0.99em 1.9em;
+    box-shadow: 2.736px 7.518px 56.64px 2.36px rgba(82, 208, 226, 0.34);
+    background-color: $btn-bg-color;
+    border-radius: 2em;
+  }
+}
+
+.price-shoecover__btn,
+.price-antiseptic__btn,
+.shoecover-certificate__btn,
+.manual__btn,
+.footer__btn {
+  a {
+    padding: 1.2em 2.58em .9em 2.69em
+  }
+}
+
+.default-title {
+  font-family: 'SF UI Display Bold';
+  font-weight: 700;
+  line-height: 1.22em;
+  @include adaptiv-font(45, 15);
+  letter-spacing: 0.050em;
+  color: $def-title-color;
+}
+
+.form__btn {
+  font-family: 'SF UI Display Bold';
+  font-weight: 700;
+  line-height: 1.65em;
+  @include adaptiv-font(14, 4);
+  letter-spacing: 0.140em;
+  color: $btn-title-color;
+  text-transform: uppercase;
+  padding: 1em 2.74em .96em;
+  box-shadow: 2.736px 7.518px 56.64px 2.36px rgba(82, 208, 226, 0.34);
+  background-color: $btn-bg-color;
+  border-radius: 2em;
+  outline: none;
+  border: none;
+}
+
