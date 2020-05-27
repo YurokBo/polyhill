@@ -97,3 +97,46 @@ h1,h2,h3,h4,h5,h6 {
   border: none;
 }
 
+.content__item-btn,
+.description__content-btn {
+  a {
+    padding: 1em 3.9em 1.1em 2.3em;
+    position: relative;
+    @include adaptiv-font(14, 3);
+
+    &::before {
+      position: absolute;
+      font-family: Flaticon;
+      content: "\f102";
+      color: $icon-color;
+      @include adaptiv-font(20, 5);
+      right: 0.8em;
+      top: 53%;
+      transform: translateY(-50%);
+      z-index: 1;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: .5em;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 2.7em;
+      height: 2.7em;
+      background-color: #D4EEF6;
+      border-radius: 50%;
+    }
+  }
+}
+
+.content__advert-title,
+.description__content-title{
+  font-family: 'SF UI Display Bold';
+  font-weight: 700;
+  line-height: 1.37em;
+  @include adaptiv-font(30, 8);
+  letter-spacing: 0.050em;
+  color: $main-font-color;
+}
+
