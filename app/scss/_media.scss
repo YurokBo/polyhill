@@ -303,6 +303,7 @@
       right: 8.61em;
       width: 54%;
     }
+
     .manual__pdf-about {
       right: 11em;
     }
@@ -348,6 +349,10 @@
   .content .content__advert .content__advert-right .content__advert-bg {
     top: 18%;
   }
+
+  .footer__top .footer__top-contacts .footer__title {
+    padding-right: 7em;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -363,6 +368,12 @@
   }
 }
 
+@media (max-width: 981px) {
+  .footer__top .footer__top-contacts .footer__title {
+    padding-right: 3em;
+  }
+}
+
 @media (max-width: 896px) {
   .manual__description {
     padding-right: 16em;
@@ -375,6 +386,12 @@
       padding-bottom: 8.5em;
       padding-right: 11em;
     }
+  }
+}
+
+@media (max-width: 811px) {
+  .footer__top .footer__top-contacts .footer__title {
+    padding-right: 0;
   }
 }
 
@@ -412,6 +429,7 @@
     img {
       right: 3.61em;
     }
+
     .manual__pdf-about {
       right: 6em;
     }
@@ -521,6 +539,7 @@
     img {
       right: .61em;
     }
+
     .manual__pdf-about {
       right: 2em;
     }
@@ -579,6 +598,10 @@
   .shoecover-certificate__content {
     padding-right: 11em;
   }
+
+  .footer__top .footer__top-contacts .footer__title {
+    padding-right: 3em;
+  }
 }
 
 @media (max-width: 459px) {
@@ -608,6 +631,7 @@
     img {
       right: 0;
     }
+
     .manual__pdf-about {
       right: 1em;
     }
@@ -626,6 +650,20 @@
   .content .content__advert .content__advert-left {
     padding-right: 2em;
   }
+
+  .footer__top {
+    .footer__top-contacts {
+      width: 45%;
+    }
+    .footer__map {
+      max-width: 55%;
+    }
+
+    .footer__top-contacts .footer__title {
+      padding-right: 0;
+    }
+  }
+
 }
 
 @media (max-width: 426px) {

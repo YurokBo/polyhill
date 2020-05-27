@@ -14,13 +14,7 @@
 .footer__content {
   display: flex;
   justify-content: space-between;
-  padding: 2.39em 1.7em 1.9em 0;
-}
-
-.footer__content {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 0 52px 0;
+  padding: 2.39em 1.7em 1.99em 0;
 }
 
 .header__logo,
@@ -28,7 +22,7 @@
   font-family: 'SF UI Display Bold';
   font-weight: 700;
   @include adaptiv-font(30, 8);
-  letter-spacing: -1px;
+  letter-spacing: -.02em;
   //line-height: 1.37;
   color: $main-font-color;
 
@@ -56,7 +50,7 @@
 .footer__address {
   font-family: 'SF UI Display Medium';
   font-weight: 500;
-  @include adaptiv-font(16, 6);
+  @include adaptiv-font(16, 4);
   letter-spacing: 0.070em;
   color: $main-font-color;
   padding-left: 3.5%;
@@ -68,7 +62,7 @@
     font-family: "Flaticon";
     content: "\f103";
     color: $icon-color;
-    @include adaptiv-font(29, 10);
+    @include adaptiv-font(29, 6);
     left: 0;
     top: 50%;
     transform: translateY(-50%);
@@ -84,7 +78,7 @@
   letter-spacing: 0.070em;
   color: #4a4665;
   position: relative;
-  padding: 2px 1.09em 0 4.5%;
+  padding: .038em 1.09em 0 4.5%;
 
   &::before {
     position: absolute;
@@ -799,20 +793,16 @@
 }
 
 /*----------------footer------------------*/
-.footer {
-
-}
-
 .footer__top {
   display: flex;
-  padding-bottom: 144px;
+  padding-bottom: 9.04em;
 
   .footer__top-contacts {
     width: 36.85%;
-    padding-top: 19px;
+    padding-top: 1.2em;
 
     .footer__title {
-      padding: 0 153px 22px 0;
+      padding: 0 4em .47em 0;
     }
 
     .footer__top-phone,
@@ -824,17 +814,17 @@
     .footer__top-phone {
       font-family: 'SF UI Display Bold';
       font-weight: 700;
-      @include adaptiv-font(20, 10);
+      @include adaptiv-font(20, 6);
       line-height: 4.45em;
       letter-spacing: 0.070em;
       color: $footer-contacts-color;
-      padding: 0 0 11px 50px;
+      padding: 0 0 .56em 2.45em;
 
       &::before {
         position: absolute;
         font-family: Flaticon;
         content: "\f100";
-        @include adaptiv-font(28, 18);
+        @include adaptiv-font(28, 8);
         color: $icon-color;
         left: 0;
       }
@@ -844,13 +834,13 @@
       font-family: 'SF UI Display Medium';
       font-weight: 500;
       color: $def-title-color;
-      padding: 0 0 36px 42px;
+      padding: 0 0 2.2em 2.56em;
 
       &::before {
         position: absolute;
         font-family: Flaticon;
         content: "\f103";
-        @include adaptiv-font(28, 18);
+        @include adaptiv-font(28, 8);
         color: $icon-color;
         left: 0;
       }
@@ -860,13 +850,13 @@
       font-family: 'SF UI Display Medium';
       font-weight: 500;
       color: #5b6065;
-      padding: 0 0 39px 45px;
+      padding: 0 0 2.5em 2.78em;
 
       &::before {
         position: absolute;
         font-family: Flaticon;
         content: "\f101";
-        @include adaptiv-font(28, 18);
+        @include adaptiv-font(28, 8);
         color: $icon-color;
         left: 0;
       }
@@ -876,36 +866,28 @@
   .footer__map {
     max-width: 63.15%;
     width: 100%;
-    min-height: 454px;
+    min-height: 28.375em;
     iframe {
       width: 100%;
       height: 100%;
     }
   }
 }
-.footer__content {
-  padding: 0 0 59px 0;
-  .footer__profile-login {
-    padding-top: 1px;
-  }
-  .footer__profile-registration {
-    padding-left: 17px;
-  }
 
-  .footer__phone {
-    padding: 2px 21px 0 50px;
-    .footer__phone::before {
-      top: 58%;
-    }
+.footer__content {
+  padding: 0 0 3.59em 0;
+
+  .footer__profile-registration {
+    padding-left: 1.2em;
   }
 }
 
 .footer__copyrights {
   background-color: $main-bg-color;
-  padding: 22px 0 28px;
+  padding: 1.6em 0 2.001em;
   font-family: 'SF UI Display Regular';
   font-weight: 400;
-  @include adaptiv-font(14, 8);
+  @include adaptiv-font(14, 4);
   line-height: 1.50em;
   letter-spacing: 0.068em;
   color: #8c899f;
@@ -914,18 +896,19 @@
     border-bottom: 1px solid #8c899f;
 
     &:first-child {
-      margin-right: 37px;
+      margin-right: 2.6em;
     }
   }
 }
 
 .footer__copyrights_public-offer {
   display: inline-block;
-  padding-left: 57px;
+  padding-left: 4.1em;
 }
 
 .footer__menu {
-  padding: 0 0 38px 0;
+  padding: 0 0 2.39em 0;
+  margin-right: 0;
 
   .footer__creators {
     font-family: 'SF UI Display Medium';
@@ -933,6 +916,13 @@
 
     a {
       color: #56d9ec;
+    }
+  }
+
+  li + li {
+    padding-right: .67em;
+    &:last-child {
+      padding-right: 0;
     }
   }
 
