@@ -98,7 +98,8 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .content__item-btn,
-.description__content-btn {
+.description__content-btn,
+.related__item-btn {
   a {
     padding: 1em 3.9em 1.1em 2.3em;
     position: relative;
@@ -138,5 +139,40 @@ h1,h2,h3,h4,h5,h6 {
   @include adaptiv-font(30, 8);
   letter-spacing: 0.050em;
   color: $main-font-color;
+}
+
+.content__items,
+.related__items {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding-top: .9em;
+  width: 100.7%;
+
+  .content__item,
+  .related__item {
+    padding: 3.1em 2.3em 2.55em;
+    background-color: $main-bg-color;
+    border-radius: 1em;
+  }
+
+  .content__item-title,
+  .related__item-title {
+    font-family: 'SF UI Display Bold';
+    font-weight: 700;
+    line-height: 1.4em;
+    @include adaptiv-font(20, 5);
+    letter-spacing: 0.025em;
+    padding: .94em 0 .39em;
+  }
+
+  .content__item-amount,
+  .related__item-amount {
+    font-family: 'SF UI Display Regular';
+    font-weight: 400;
+    @include adaptiv-font(16, 3);
+    line-height: 2.0625em;
+    padding-bottom: 1em;
+  }
 }
 
