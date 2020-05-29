@@ -194,7 +194,7 @@
   }
 
   .sidebar__menu {
-    padding: 5.6em 1.3em 3.4em 2.67em;
+    padding: 5.6em 1.3em 3.2em 2.67em;
     border-radius: 1em;
     background-color: $main-bg-color;
     position: relative;
@@ -999,10 +999,10 @@
   }
 }
 
-/*---------------transition-------------------*/
-.transition {
+/*---------------breadcrumbs-------------------*/
+.breadcrumbs {
   padding-bottom: 1.78em;
-  .transition__inner {
+  .breadcrumbs__inner {
     li {
       display: inline-block;
       &:last-child {
