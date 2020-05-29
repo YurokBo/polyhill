@@ -1261,8 +1261,63 @@
   }
 }
 
+/*---------increment----decrement--------------*/
+.quantity {
+  position: relative;
+  max-width: 6.5em;
+  width: 100%;
+  input {
+    width: 100%;
+    border-radius: 2em;
+    outline: none;
+    border: none;
+    padding: .7em 2em .7em 1em;
+    font-family: 'SF UI Display Bold';
+    font-weight: 700;
+    line-height: 0;
+    @include adaptiv-font(20, 5);
+    color: $def-title-color;
+    letter-spacing: 0.035em;
+  }
+}
 
+.increment-decrement__btn {
+  display: block;
+  max-width: 2.375em;
+  width: 100%;
+  min-height: 3.25em;
+  position: absolute;
+  right: 0;
+  top: 0;
+  &:hover {
+    .increment,
+    .decrement {
+      display: block;
+    }
+  }
+}
 
+.increment,
+.decrement {
+  display: none;
+  background-color: $incr-decr-btn-bg;
+  padding: .101em 0 .101em .5em;
+  img {
+    max-width: 1em;
+    width: 100%;
+  }
+}
+
+.increment {
+  border-top-right-radius: 2em;
+}
+
+.decrement {
+  border-bottom-right-radius: 2em;
+  img {
+    transform: rotate(180deg);
+  }
+}
 
 
 

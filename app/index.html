@@ -17,7 +17,7 @@
     <div class="container">
         <div class="header__content">
             <div class="header__logo">
-                <a href="#">Полихилл.</a>
+                <a href="index.html">Полихилл.</a>
             </div>
             <div class="header__address">
                 Москва, Каширское шоссе 3к2 стр.8
@@ -184,7 +184,13 @@
                                 </label>
                                 <label>
                                     <span>Кол-во</span>
-                                    <input type="text" placeholder="1500">
+                                    <div class="quantity">
+                                        <input type="text" min="1" step="1" value="1">
+                                        <div class="increment-decrement__btn">
+                                            <span class="increment"><img src="img/arrow-up.png" alt=""></span>
+                                            <span class="decrement"><img src="img/arrow-up.png" alt=""></span>
+                                        </div>
+                                    </div>
                                 </label>
                             </div>
                             <div class="form__box-bottom">
@@ -203,9 +209,7 @@
                     <img src="img/mail-box.png" alt="box" class="form__bg">
                 </div>
             </div>
-
         </div>
-
     </div>
 </section>
 
