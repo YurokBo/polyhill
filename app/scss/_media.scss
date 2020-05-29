@@ -628,6 +628,12 @@
   }
 }
 
+@media (max-width: 323px) {
+  .main-menu__catalog {
+    margin-right: 2.8em;
+  }
+}
+
 @media (max-width: 320px) {
   .sidebar {
     .sidebar__menu {
