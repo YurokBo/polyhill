@@ -1,6 +1,6 @@
 $(function () {
 
-    $('.decrement').click(function () {
+   /* $('.decrement').click(function () {
         var $input = $(this).parent().find('input');
         var count = parseInt($input.val()) - 1;
         count = count < 1 ? 1 : count;
@@ -13,34 +13,46 @@ $(function () {
         $input.val(parseInt($input.val()) + 1);
         $input.change();
         return false;
-    });
+    });*/
 });
 
 
-/*const input = document.querySelector('input[type=text]');
+const input = document.querySelector('input[type=text]');
 
 document.addEventListener('click', e => {
-    // const  up = e.target.closest('.increment');
-        //down = e.target.closest('.decrement');
-    if (!increment(e)) {
+     const  up = e.target.closest('.increment');
+        down = e.target.closest('.decrement');
+        let count = input.value;
+    if (!down || !up) {
         e.preventDefault()
     }
-    //decrement(e);
 
-});*/
+    if (down) {
+      return --count;
+    }
 
-/*const increment = e => {
+    if (up) {
+      return   ++count;
+    }
+
+
+    /*increment(e);
+    decrement(e);
+*/
+});
+
+const increment = e => {
     const up = e.target.closest('.increment');
     /!*let count = input.value;*!/
 
     if (!up) {
         e.preventDefault();
     }
-    ++input.value;
-    return input.value;
-};*/
 
-/*const decrement = e => {
+    return ++input.value;
+};
+
+const decrement = e => {
    const down = e.target.closest('.decrement');
    let count =  input.value;
 
@@ -48,7 +60,7 @@ document.addEventListener('click', e => {
        e.preventDefault();
    }
 
-    --input.value;
-    return input.value;
-};*/
+
+    return --input.value;
+};
 
