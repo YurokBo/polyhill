@@ -15,7 +15,7 @@ body {
   /*font-family: 'SF UI Display Medium';*/
   font-family: 'SF UI Display Regular';
   font-weight: 400;
-  @include adaptiv-font(16, 4);
+  @include adaptiv-font(16, 12);
   line-height: 1.44em;
   letter-spacing: 0.070em;
   color: $main-font-color;
@@ -50,7 +50,7 @@ h1,h2,h3,h4,h5,h6 {
   font-family: 'SF UI Display Bold';
   font-weight: 700;
   line-height: 1.65em;
-  @include adaptiv-font(14, 4);
+  @include adaptiv-font(14, 12);
   letter-spacing: 0.140em;
   color: $btn-title-color;
   text-transform: uppercase;
@@ -68,7 +68,7 @@ h1,h2,h3,h4,h5,h6 {
 .manual__btn,
 .footer__btn {
   a {
-    padding: 1.2em 2.58em .9em 2.69em
+    padding: 16px 36px 13px 38px;
   }
 }
 
@@ -76,7 +76,7 @@ h1,h2,h3,h4,h5,h6 {
   font-family: 'SF UI Display Bold';
   font-weight: 700;
   line-height: 1.22em;
-  @include adaptiv-font(45, 13);
+  @include adaptiv-font(45, 30);
   letter-spacing: 0.050em;
   color: $def-title-color;
 }
@@ -85,33 +85,35 @@ h1,h2,h3,h4,h5,h6 {
   font-family: 'SF UI Display Bold';
   font-weight: 700;
   line-height: 1.65em;
-  @include adaptiv-font(14, 4);
+  @include adaptiv-font(14, 12);
   letter-spacing: 0.140em;
   color: $btn-title-color;
   text-transform: uppercase;
-  padding: 1em 2.74em .96em;
+  padding: 14px 41px 13px;
   box-shadow: 2.736px 7.518px 56.64px 2.36px rgba(82, 208, 226, 0.34);
   background-color: $btn-bg-color;
   border-radius: 2em;
   outline: none;
   border: none;
+  cursor: pointer;
 }
 
 .content__item-btn,
 .description__content-btn,
 .related__item-btn {
   a {
-    padding: 1em 3.9em 1.1em 2.3em;
+    padding: 17px 60px 13px 25px;
     position: relative;
-    @include adaptiv-font(14, 3);
+    @include adaptiv-font(14, 12);
+    cursor: pointer;
 
     &::before {
       position: absolute;
       font-family: Flaticon;
       content: "\f102";
       color: $icon-color;
-      @include adaptiv-font(20, 5);
-      right: 0.8em;
+      @include adaptiv-font(20, 16);
+      right: 16px;
       top: 53%;
       transform: translateY(-50%);
       z-index: 1;
@@ -120,11 +122,11 @@ h1,h2,h3,h4,h5,h6 {
     &::after {
       content: '';
       position: absolute;
-      right: .5em;
+      right: 8px;
       top: 50%;
       transform: translateY(-50%);
-      width: 2.7em;
-      height: 2.7em;
+      width: 36.49px;
+      height: 36.49px;
       background-color: #D4EEF6;
       border-radius: 50%;
     }
@@ -136,7 +138,7 @@ h1,h2,h3,h4,h5,h6 {
   font-family: 'SF UI Display Bold';
   font-weight: 700;
   line-height: 1.37em;
-  @include adaptiv-font(30, 8);
+  @include adaptiv-font(30, 22);
   letter-spacing: 0.050em;
   color: $main-font-color;
 }
@@ -146,14 +148,14 @@ h1,h2,h3,h4,h5,h6 {
   display: flex;
   justify-content: space-between;
   text-align: center;
-  padding-top: .9em;
+  padding-top: 15px;
   width: 100.7%;
 
   .content__item,
   .related__item {
-    padding: 3.1em 2.3em 2.55em;
+    padding: 50px 38px 38px;
     background-color: $main-bg-color;
-    border-radius: 1em;
+    border-radius: 15px;
   }
 
   .content__item-title,
@@ -161,18 +163,18 @@ h1,h2,h3,h4,h5,h6 {
     font-family: 'SF UI Display Bold';
     font-weight: 700;
     line-height: 1.4em;
-    @include adaptiv-font(20, 5);
+    @include adaptiv-font(20, 16);
     letter-spacing: 0.025em;
-    padding: .94em 0 .39em;
+    padding: 19px 0 8px;
   }
 
   .content__item-amount,
   .related__item-amount {
     font-family: 'SF UI Display Regular';
     font-weight: 400;
-    @include adaptiv-font(16, 3);
+    @include adaptiv-font(16, 12);
     line-height: 2.0625em;
-    padding-bottom: 1em;
+    padding-bottom: 15px;
   }
 }
 

@@ -5,6 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Интернет магазин средств индивидуальной защиты">
     <title>Полихилл</title>
 
     <link rel="stylesheet" href="libs/all.min.css">
@@ -23,17 +24,30 @@
                 Москва, Каширское шоссе 3к2 стр.8
             </div>
             <div class="header__phone">
-                <a href="tel:+7(495) 090-45-45">
+                <a href="tel:+74950904545">
                     +7(495) 090-45-45
                 </a>
             </div>
             <div class="header__profile">
-                <div class="header__profile-login">
+                <a href="#" class="header__profile-login">
                     Вход
-                </div>
-                <div class="header__profile-registration">
+                </a>
+                <a href="#" class="header__profile-registration">
                     Регистрация
-                </div>
+                </a>
+            </div>
+            <div class="header__btn-box">
+                <a href="tel:+74950904545" class="header__phone-btn"></a>
+                <a class="header__login-btn"></a>
+            </div>
+            <div class="header__profile-mobile">
+                <a href="#" class="close"></a>
+                <a href="#" class="header__profile-login-mobile">
+                    Вход
+                </a>
+                <a href="#" class="header__profile-registration-mobile">
+                    Регистрация
+                </a>
             </div>
         </div>
     </div>
@@ -50,7 +64,7 @@
                         <div></div>
                     </div>
                     <div class="sidebar__title">
-                        Каталог товаров
+                        Каталог <span>товаров</span>
                     </div>
                 </div>
                 <div class="sidebar__menu">
@@ -72,19 +86,44 @@
                     </ul>
                 </div>
             </aside>
-            <nav class="menu">
-                <ul>
-                    <li><a href="#">Доставка</a></li>
-                    <li><a href="#">Отзывы</a></li>
-                    <li><a href="#">О нас</a></li>
-                    <li><a href="index-workscheme.html">Схема работы</a></li>
-                    <li><a href="#">Контакты</a></li>
-                </ul>
-                <div class="menu__basket">
+            <div class="mobile-menu__group">
+                <nav class="mobile-menu">
+                    <span class="mobile-menu__title">Меню</span>
+                    <ul class="submenu">
+                        <li><a href="#">Доставка</a></li>
+                        <li><a href="#">Отзывы</a></li>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Схема работы</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="menu__basket-mobile">
                     <a href="#">корзина</a>
                     <span class="menu__basket-amount">+1</span>
                 </div>
-            </nav>
+            </div>
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="#">Доставка</a></li>
+                        <li><a href="index-feedback.html">Отзывы</a></li>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="index-workscheme.html">Схема работы</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="menu-group">
+                    <a href="#" class="menu__like">
+                        <span class="menu__like-amount">+1</span>
+                    </a>
+                    <a href="#" class="menu__bar">
+                        <span class="menu__bar-amount">+1</span>
+                    </a>
+                    <a href="#" class="menu__basket">
+                        <span class="menu__basket-amount">+1</span>
+                    </a>
+                </div>
+            </div>
             <main class="content">
                 <div class="content__wrapper">
                     <div class="content__advert">
@@ -175,7 +214,7 @@
                             <div class="form__box-top">
                                 <label>
                                     <span>Товар</span>
-                                    <select>
+                                    <select name="shoe-cover">
                                         <option>Бахилы 18 мкм</option>
                                         <option>Бахилы 18 мкм</option>
                                         <option>Бахилы 18 мкм</option>
@@ -185,7 +224,7 @@
                                 <label>
                                     <span>Кол-во</span>
                                     <div class="quantity">
-                                        <input type="text" min="1" step="1" value="1">
+                                        <input type="text" min="1" step="1" value="1" name="amount">
                                         <div class="increment-decrement__btn">
                                             <span class="increment"><img src="img/arrow-up.png" alt=""></span>
                                             <span class="decrement"><img src="img/arrow-up.png" alt=""></span>
@@ -196,7 +235,7 @@
                             <div class="form__box-bottom">
                                 <label>
                                     <span>E-mail</span>
-                                    <input type="text" placeholder="E-mail">
+                                    <input type="email" placeholder="E-mail" name="email" required>
                                 </label>
                             </div>
                             <button type="submit" class="form__btn">
@@ -216,7 +255,7 @@
 <section class="price-shoecover">
     <div class="container">
         <div class="price-shoecover__inner">
-            <div class="price-shoecover__content">
+            <div class="price-shoecover__content" data-da="price-shoecover__inner,last,820">
                 <div class="price-shoecover__title default-title">
                     Скачайте прайс-лист
                     на медицнские бахилы
@@ -228,7 +267,7 @@
                     <a href="#">Скачать</a>
                 </div>
             </div>
-            <div class="price-shoecover__image">
+            <div class="price-shoecover__image" data-da="price-shoecover__inner,0,820">
                 <img src="img/shoecover-price.png" alt="shoe cover price">
             </div>
         </div>
@@ -317,7 +356,7 @@
     </div>
 </section>
 
-<footer class="footer">
+<!--<footer class="footer">
     <div class="footer__inner">
         <div class="container">
             <div class="footer__top">
@@ -327,7 +366,7 @@
                         в наш офис
                     </div>
                     <div class="footer__top-phone">
-                        +7(495) 090-45-45
+                        <a href="tel:+74950904545">+7(495) 090-45-45</a>
                     </div>
                     <div class="footer__top-address">
                         Москва, Каширское шоссе 3к2 стр.8
@@ -352,17 +391,17 @@
                     Москва, Каширское шоссе 3к2 стр.8
                 </div>
                 <div class="footer__phone">
-                    <a href="tel:+7(495) 090-45-45">
+                    <a href="tel:+74950904545">
                         +7(495) 090-45-45
                     </a>
                 </div>
                 <div class="footer__profile">
-                    <div class="footer__profile-login">
+                    <a href="#" class="footer__profile-login">
                         Вход
-                    </div>
-                    <div class="footer__profile-registration">
+                    </a>
+                    <a href="#" class="footer__profile-registration">
                         Регистрация
-                    </div>
+                    </a>
                 </div>
             </div>
             <div class="footer__menu">
@@ -394,7 +433,7 @@
             </div>
         </div>
     </div>
-</footer>
+</footer>-->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="js/all.min.js"></script>
