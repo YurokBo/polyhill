@@ -93,16 +93,61 @@
     padding: 0 10px;
   }
 
-  .main__wrapper {
-    grid-template-areas: "sidebar nav" "content content";
-    grid-template-columns: 34.21% 64.2%;
+  .header__content {
+    padding: 37px 28px 32px;
+    position: relative;
+  }
+
+  .menu-burger__btn {
+    display: block;
+    cursor: pointer;
+    width: 32px;
+    height: 26px;
+    background-image: url('../img/menu-burger.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 
   }
 
-  .sidebar {
-    position: relative;
+  .menu-burger {
+    display: block;
+    position: absolute;
+    left: 28px;
+    top: 95px;
+    background-color: $header-bg-color;
+    transform: scaleY(0);
+    transform-origin: 0 0;
+    transition: all .3s;
 
-    .sidebar__top {
+    .catalog {
+
+      .catalog__submenu {
+        display: none;
+      }
+
+      .catalog__submenu-active {
+        display: block;
+      }
+    }
+  }
+
+  .menu-burger-active {
+    transform: scaleY(1);
+    transition: all .3s;
+  }
+
+  .main__wrapper {
+    grid-template-areas: "content" "content";
+    grid-template-columns: 100%;
+    grid-auto-rows: 0 98%;
+  }
+
+  .sidebar {
+    display: none;
+    //position: relative;
+
+    /*.sidebar__top {
       padding: 29px 35px 29px 49px;
       z-index: 101;
       height: 84px;
@@ -132,123 +177,11 @@
       ul {
         visibility: visible;
       }
-    }
+    }*/
   }
 
   .menu {
     display: none;
-  }
-
-  .mobile-menu__group {
-    display: flex;
-    z-index: 100;
-    justify-content: space-between;
-    font-family: 'SF UI Display Medium';
-    font-weight: 500;
-    @include adaptiv-font(22, 14);
-    line-height: 1.28em;
-    letter-spacing: 0.070em;
-    color: $main-font-color;
-    background-color: #F3EFF5;
-    padding: 29px 35px 29px 49px;
-    height: 84px;
-    border-radius: 15px;
-  }
-
-  .mobile-menu {
-
-    max-width: 260px;
-    width: 100%;
-    //padding: 40px 0 0 40px;
-
-
-    ul {
-      margin: 0;
-      list-style: none;
-      padding-left: 30px;
-      display: none;
-      @include adaptiv-font(16, 12);
-      background-color: #F3EFF5;
-      border-radius: 15px;
-
-      li {
-        padding: 10px 0;
-      }
-
-    }
-
-    .mobile-menu__title {
-      cursor: pointer;
-      padding-left: 31px;
-      padding-right: 20px;
-      position: relative;
-
-      &::before {
-        content: "\f103";
-        font-family: "Flaticon2";
-        @include adaptiv-font(26, 18);
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-
-      &::after {
-        content: "\f104";
-        font-family: "Flaticon2";
-        @include adaptiv-font(12, 8);
-        position: absolute;
-        right: 0;
-        top: 54%;
-        transform: translateY(-50%) rotate(-90deg);
-      }
-    }
-  }
-
-  .menu__basket-mobile {
-    a {
-      font-family: 'SF UI Display Medium';
-      font-weight: 500;
-      @include adaptiv-font(15, 11);
-      letter-spacing: 0.140em;
-      text-transform: uppercase;
-      color: #84878c;
-      padding: 0 7px 0 65px;
-      position: relative;
-
-      &::before {
-        position: absolute;
-        font-family: Flaticon;
-        content: "\f102";
-        @include adaptiv-font(36, 30);
-        line-height: 1.53em;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        color: $icon-color;
-      }
-    }
-
-    .menu__basket-amount {
-      font-family: 'SF UI Display Bold';
-      font-weight: 700;
-      line-height: 1.53em;
-      @include adaptiv-font(15, 11);
-      letter-spacing: 0.140em;
-      color: $icon-color;
-    }
-  }
-
-  .open {
-    ul {
-      display: block;
-    }
-
-    .mobile-menu__title {
-      &::after {
-        transform: translateY(-45%) rotate(0deg);
-      }
-    }
   }
 
   .content {
@@ -316,6 +249,8 @@
   }
 
   .manual {
+    height: 1074px;
+
     .manual__inner {
       display: block;
       margin: 0 auto;
@@ -330,6 +265,7 @@
     .manual__image {
       width: 100%;
       height: 268px;
+
       img {
         width: 100%;
         right: 0;
@@ -344,10 +280,46 @@
     }
   }
 
-}
+  .footer__top {
+    .footer__map {
+      max-width: 600px;
+    }
+  }
 
-@media screen and (max-width: 1240px) {
+  .footer__content {
+    flex-direction: column;
 
+    div + div {
+      margin-top: 40px;
+    }
+
+    .footer__logo {
+      margin-bottom: 10px;
+    }
+
+    .footer__profile {
+      .footer__profile-login,
+      .footer__profile-registration {
+        font-size: 18px;
+      }
+
+      .footer__profile-registration {
+        &:before {
+          width: 2px;
+          height: 18px;
+        }
+      }
+    }
+  }
+
+  .footer__menu {
+    flex-direction: column;
+    align-items: start;
+
+    ul {
+      margin-bottom: 40px;
+    }
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -435,7 +407,8 @@
   }
 
   .shoecover-certificate {
-    padding: 0 0 60px;
+    padding: 0 0 100px;
+
     .shoecover-certificate__content {
       padding: 55px 33px 43px 0;
     }
@@ -445,6 +418,42 @@
         left: 44px;
         width: 37.74%;
       }
+    }
+  }
+  .content__items {
+    .content__item {
+      padding: 50px 25px 38px;
+    }
+  }
+  .content__item-btn {
+    a {
+      padding: 14px 55px 13px 24px;
+    }
+  }
+
+  .manual {
+    padding: 50px 0 150px;
+    height: 1000px;
+  }
+
+  .footer__top {
+    flex-direction: column;
+
+    .footer__top-contacts {
+      width: 100%;
+      padding: 0 0 80px;
+    }
+
+    .footer__map {
+      max-width: 100%;
+    }
+  }
+
+  .footer__copyrights {
+    .footer__copyrights_public-offer {
+      display: block;
+      padding-left: 0;
+      margin-top: 30px;
     }
   }
 }
@@ -617,20 +626,61 @@
       }
     }
   }
-}
 
-@media screen and (max-width: 768px) {
+  .content {
+    .content__advert {
+      .content__advert-left {
+        padding: 88px 10px 76px 30px;
+      }
+    }
+  }
 
-}
+  .content__items {
+    .content__item {
+      width: 48.5%;
 
-@media screen and (max-width: 722px) {
+      &:last-child {
+        display: none;
+      }
 
+      .content__item-btn a {
+        padding: 15px 60px 13px 25px;
+      }
+    }
+  }
+
+  .manual {
+    height: 827px;
+  }
+
+  .footer__menu {
+    ul {
+      li {
+        display: block;
+        padding-left: 0;
+        font-size: 18px;
+
+        &:before {
+          display: none;
+        }
+
+      }
+
+      li + li {
+        margin-top: 20px;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 716px) {
   .container {
     max-width: 560px;
     padding: 0 10px;
+  }
+
+  .form {
+    padding: 70px 0 0 0;
   }
 
   .mobile-menu {
@@ -793,18 +843,65 @@
   }
 }
 
-@media screen and (max-width: 626px) {
-
-}
-
-@media screen and (max-width: 600px) {
-
-}
-
 @media screen and (max-width: 548px) {
   .container {
     max-width: 440px;
     padding: 0 10px;
+  }
+
+  .content__items {
+    .content__item {
+      padding: 30px 16px;
+    }
+  }
+  .content {
+    .content__advert {
+      height: 236px;
+
+      .content__advert-left {
+        width: 51%;
+        padding: 55px 10px 40px 10px;
+
+        .content__advert-title {
+          font-size: 25px;
+        }
+      }
+
+      .content__advert-right {
+        .content__advert-price {
+          width: 100px;
+          height: 100px;
+          padding-top: 29px;
+          left: 39px;
+        }
+
+        .content__advert-bg {
+          top: 83px;
+          right: 6px;
+        }
+      }
+    }
+  }
+
+  .manual {
+    padding: 0 0 150px;
+    height: 760px;
+  }
+
+  .footer__top .footer__top-contacts .footer__title {
+    padding: 0 0 22px 0;
+  }
+  .footer__top {
+    margin-bottom: 120px;
+    padding: 0;
+
+    .footer__map {
+      min-height: 250px;
+    }
+
+    .ymaps-2-1-76-map {
+      height: 250px !important;
+    }
   }
 }
 
@@ -832,6 +929,22 @@
     span {
       display: none;
     }
+  }
+}
+
+@media screen and (max-width: 438px) {
+  .content .content__advert .content__advert-right .content__advert-price {
+    width: 80px;
+    height: 80px;
+    padding-top: 20px;
+    top: 47px;
+    left: 30px;
+  }
+}
+
+@media screen and (max-width: 435px) {
+  .content__items .content__item .content__item-btn a {
+    padding: 15px 56px 13px 21px;
   }
 }
 
@@ -923,6 +1036,9 @@
   }
 
   .manual {
+    padding: 0 0 100px;
+    height: 640px;
+
     .manual__inner {
       max-width: 400px;
     }
@@ -946,6 +1062,55 @@
         height: 90px;
         padding: 26px 0 0 0;
       }
+    }
+  }
+
+  .content {
+    .content__advert {
+      flex-direction: column;
+      height: 455px;
+      text-align: center;
+
+      .content__advert-left,
+      .content__advert-right {
+        width: 100%;
+      }
+
+      .content__advert-right {
+        .content__advert-price {
+          width: 100px;
+          height: 100px;
+          padding-top: 30px;
+          top: 5px;
+          left: 70px;
+        }
+
+        .content__advert-bg {
+          top: 40px;
+        }
+      }
+    }
+
+    .content__items {
+      .content__item {
+        width: 100%;
+
+        &:first-child {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .footer__copyrights {
+    .footer__copyrights_inner {
+      a + a {
+        margin-top: 10px;
+      }
+    }
+
+    .footer__copyrights_public-offer {
+      margin-top: 20px;
     }
   }
 }
@@ -976,6 +1141,8 @@
       font-size: 20px;
     }
   }
+
+
 }
 
 @media screen and (max-width: 363px) {
@@ -1005,655 +1172,3 @@
   }
 }
 
-/*
-@media (max-width: 1821px) {
-  .sidebar {
-    .sidebar__menu {
-      padding-right: 4em;
-    }
-  }
-
-  .form__left {
-    padding-right: 5em;
-  }
-  .form__right .form__bg {
-    width: 81%;
-  }
-}
-
-@media (max-width: 1812px) {
-  .form__left {
-    padding-right: 5.1em;
-  }
-}
-
-@media (max-width: 1700px) {
-  .sidebar {
-    .sidebar__menu {
-      padding-right: 6em;
-    }
-  }
-  .shoecover-certificate__image img {
-    width: 24.74%;
-  }
-
-  .manual__description {
-    padding-right: 9em;
-  }
-}
-
-@media (max-width: 1606px) {
-  .content .content__advert .content__advert-right .content__advert-bg {
-    top: 10%;
-    right: 6%;
-    width: 93%;
-  }
-
-  .form__right .form__bg {
-    width: 71%;
-  }
-}
-
-@media (max-width: 1585px) {
-  .price-shoecover__content {
-    padding-bottom: 10em;
-  }
-
-  .price-shoecover__image img {
-    width: 37.5%;
-  }
-}
-
-@media (max-width: 1576px) {
-  .sidebar {
-    .sidebar__menu {
-      padding-right: 7.5em;
-    }
-  }
-}
-
-@media (max-width: 1542px) {
-  .manual__image {
-    img {
-      right: -2.39em;
-      width: 60%;
-    }
-
-    .manual__pdf-about {
-      right: 0;
-    }
-  }
-}
-
-@media (max-width: 1514px) {
-  .sidebar {
-    .sidebar__menu {
-      padding-right: 8em;
-    }
-  }
-  .content .content__advert .content__advert-right .content__advert-bg {
-    width: 85%;
-  }
-
-  .manual__description {
-    padding-right: 13em;
-  }
-}
-
-@media (max-width: 1397px) {
-  .sidebar {
-    .sidebar__menu {
-      padding-right: 11em;
-    }
-  }
-
-  .form__right .form__bg {
-    width: 65%;
-  }
-}
-
-@media (max-width: 1391px) {
-  .sidebar {
-    .sidebar__menu {
-     // padding-bottom: 3.0em;
-    }
-  }
-
-  .content .content__advert .content__advert-right .content__advert-bg {
-    top: 8%;
-    right: 7%;
-    width: 83%;
-  }
-
-  .shoecover-certificate__image img {
-    left: 15.57em;
-    width: 20.74%;
-  }
-}
-
-@media (max-width: 1338px) {
-  .manual__description {
-    padding-right: 19em;
-  }
-}
-
-@media (max-width: 1334px) {
-  .content .content__advert .content__advert-left {
-    padding-right: 10em;
-  }
-}
-
-@media (max-width: 1298px) {
-  .manual__image {
-    img {
-      right: 8.61em;
-      width: 54%;
-    }
-
-    .manual__pdf-about {
-      right: 11em;
-    }
-  }
-}
-
-@media (max-width: 1268px) {
-  .sidebar {
-    .sidebar__menu {
-      padding-right: 13em;
-    }
-  }
-  .content .content__advert .content__advert-right .content__advert-bg {
-    top: 14%;
-    right: 28%;
-    width: 70%;
-  }
-}
-
-@media (max-width: 1144px) {
-  .sidebar {
-    .sidebar__menu {
-      //padding-bottom: 3em;
-    }
-  }
-}
-
-@media (max-width: 1024px) {
-  .sidebar {
-    .sidebar__menu {
-      //padding-bottom: 2.3em;
-    }
-  }
-  .content .content__advert .content__advert-right .content__advert-bg {
-    top: 18%;
-  }
-
-  .footer__top .footer__top-contacts .footer__title {
-    padding-right: 7em;
-  }
-}
-
-@media (max-width: 1000px) {
-  .sidebar {
-    .sidebar__menu {
-      //padding-bottom: 2.7em;
-      padding-right: 12em;
-    }
-  }
-
-  .content .content__advert .content__advert-left {
-    padding-right: 8em;
-  }
-}
-
-@media (max-width: 981px) {
-  .footer__top .footer__top-contacts .footer__title {
-    padding-right: 3em;
-  }
-}
-
-@media (max-width: 896px) {
-  .manual__description {
-    padding-right: 16em;
-  }
-}
-
-@media (max-width: 870px) {
-  .sidebar {
-    .sidebar__menu {
-      padding-right: 11em;
-    }
-  }
-}
-
-@media (max-width: 811px) {
-  .footer__top .footer__top-contacts .footer__title {
-    padding-right: 0;
-  }
-}
-
-@media (max-width: 803px) {
-  .sidebar {
-    .sidebar__menu {
-      //padding-bottom: 3.0em;
-      //padding-top: 5em;
-      padding-right: 10em;
-    }
-  }
-
-  .content .content__advert .content__advert-left {
-    padding-right: 6em;
-  }
-}
-
-@media (max-width: 774px) {
-  .sidebar {
-    .sidebar__menu {
-      //padding-bottom: 3.7em;
-    }
-  }
-}
-
-@media (max-width: 754px) {
-  .sidebar {
-    .sidebar__menu {
-      //padding-bottom: 3.6em;
-    }
-  }
-}
-
-@media (max-width: 737px) {
-  .manual__image {
-    img {
-      right: 3.61em;
-    }
-
-    .manual__pdf-about {
-      right: 6em;
-    }
-  }
-}
-
-@media (max-width: 693px) {
-  .manual__description {
-    padding-right: 15em;
-  }
-}
-
-@media (max-width: 665px) {
-  .sidebar {
-    .sidebar__menu {
-      //padding-bottom: 3.5em;
-      padding-right: 9em;
-    }
-  }
-
-  .manual__description {
-    padding-right: 13em;
-  }
-}
-
-@media (max-width: 596px) {
-  .sidebar {
-    .sidebar__menu {
-      //padding-bottom: 4.5em;
-    }
-  }
-}
-
-@media (max-width: 588px) {
-  .sidebar {
-    .sidebar__menu {
-      //padding-bottom: 5.5em;
-    }
-  }
-}
-
-@media (max-width: 578px) {
-  .sidebar {
-    .sidebar__menu {
-      padding-right: 8em;
-    }
-  }
-}
-
-@media (max-width: 560px) {
-  .manual__description {
-    padding-right: 11em;
-  }
-}
-
-@media (max-width: 527px) {
-  .sidebar {
-    .sidebar__menu {
-      //padding-bottom: 6.4em;
-    }
-  }
-
-  .content .content__advert .content__advert-left {
-    padding-right: 4em;
-  }
-
-  .content .content__advert .content__advert-right .content__advert-bg {
-    top: 22%;
-  }
-}
-
-@media (max-width: 516px) {
-  .sidebar {
-    .sidebar__menu {
-      padding-right: 7em;
-    }
-  }
-
-  .manual__content {
-    padding-top: 2em;
-  }
-}
-
-@media (max-width: 504px) {
-  .manual__image {
-    img {
-      right: .61em;
-    }
-
-    .manual__pdf-about {
-      right: 2em;
-    }
-  }
-  .manual__content {
-    width: 50%;
-    padding-right: 2em;
-  }
-}
-
-@media (max-width: 500px) {
-  .price-shoecover__content {
-    padding-right: 1em;
-  }
-
-  .price-shoecover__image img {
-    width: 40.5%;
-  }
-
-  .manual__description {
-    padding-right: 9em;
-  }
-}
-
-@media (max-width: 480px) {
-  .sidebar {
-    .sidebar__menu {
-      //padding-bottom: 5.9em;
-    }
-  }
-  .price-shoecover__content {
-    width: 60%;
-    padding-right: 10em;
-    padding-top: 12em;
-  }
-
-  .price-shoecover__image {
-    width: 40%;
-  }
-}
-
-@media (max-width: 465px) {
-  .sidebar {
-    .sidebar__menu {
-      //padding-bottom: 6.0em;
-      padding-right: 5em;
-      padding-top: 6.3em;
-    }
-  }
-}
-
-@media (max-width: 463px) {
-  .shoecover-certificate__content {
-    padding-right: 11em;
-  }
-
-  .footer__top .footer__top-contacts .footer__title {
-    padding-right: 3em;
-  }
-}
-
-@media (max-width: 459px) {
-  .price-shoecover__content {
-    padding-right: 8em;
-  }
-}
-
-@media (max-width: 455px) {
-  .sidebar {
-    .sidebar__menu {
-      //padding-bottom: 5.8em;
-    }
-  }
-}
-
-@media (max-width: 446px) {
-  .sidebar {
-    .sidebar__menu {
-      //padding-bottom: 5em;
-    }
-  }
-}
-
-@media (max-width: 442px) {
-  .manual__image {
-    img {
-      right: 0;
-    }
-
-    .manual__pdf-about {
-      right: 1em;
-    }
-  }
-  .manual__content {
-    padding-right: 0;
-  }
-}
-
-@media (max-width: 430px) {
-  .sidebar {
-    .sidebar__menu {
-      //padding-bottom: 4.5em;
-    }
-  }
-  .content .content__advert .content__advert-left {
-    padding-right: 2em;
-  }
-
-  .footer__top {
-    .footer__top-contacts {
-      width: 45%;
-    }
-    .footer__map {
-      max-width: 55%;
-    }
-
-    .footer__top-contacts .footer__title {
-      padding-right: 0;
-    }
-  }
-
-}
-
-@media (max-width: 426px) {
-  .price-shoecover__content {
-    padding-right: 6em;
-  }
-
-  .manual__description {
-    padding-right: 7em;
-  }
-}
-
-@media (max-width: 414px) {
-  .sidebar {
-    .sidebar__menu {
-      //padding-bottom: 4.5em;
-    }
-  }
-  .content .content__advert .content__advert-right .content__advert-bg {
-    top: 26%;
-  }
-
-  .shoecover-certificate__content {
-    padding-right: 8em;
-  }
-}
-
-@media (max-width: 410px) {
-  .sidebar {
-    .sidebar__menu {
-      padding-top: 6em;
-      //padding-bottom: 4em;
-    }
-  }
-}
-
-@media (max-width: 407px) {
-  .manual__image {
-    img {
-      width: 50%;
-    }
-  }
-  .manual__content {
-    width: 60%;
-  }
-}
-
-@media (max-width: 403px) {
-  .sidebar {
-    .sidebar__menu {
-      //padding-bottom: 5.4em;
-    }
-  }
-}
-
-@media (max-width: 396px) {
-  .price-shoecover__content {
-    padding-right: 4em;
-  }
-}
-
-@media (max-width: 390px) {
-  .sidebar {
-    .sidebar__menu {
-      //padding-bottom: 4.7em;
-      padding-right: 3em;
-    }
-  }
-}
-
-@media (max-width: 380px) {
-  .sidebar {
-    .sidebar__menu {
-      //padding-bottom: 4.5em;
-    }
-  }
-
-  .manual__description {
-    padding-right: 6em;
-  }
-}
-
-@media (max-width: 370px) {
-  .header__content {
-    padding-right: 0;
-  }
-
-  .header__phone {
-    padding-right: 0;
-    padding-top: 0;
-  }
-
-  .header__profile {
-    .header__profile-login {
-      padding-right: 0.1em;
-    }
-
-    .header__profile-registration {
-      padding-left: 0.7em;
-    }
-  }
-  .sidebar {
-    .sidebar__menu {
-      //padding-bottom: 3.7em;
-      padding-right: 4em;
-    }
-  }
-
-  .shoecover-certificate__content {
-    padding-right: 5em;
-  }
-}
-
-@media (max-width: 356px) {
-  .manual__image {
-    img {
-      width: 45%;
-    }
-  }
-  .manual__content {
-    width: 70%;
-  }
-}
-
-@media (max-width: 349px) {
-  .manual__description {
-    padding-right: 4em;
-  }
-}
-
-@media (max-width: 345px) {
-  .sidebar {
-    .sidebar__menu {
-      //padding-bottom: 3em;
-    }
-  }
-
-  .content .content__advert .content__advert-left {
-    padding-right: 1em;
-  }
-}
-
-@media (max-width: 342px) {
-  .sidebar {
-    .sidebar__menu {
-      //padding-bottom: 4em;
-      padding-right: 1em;
-    }
-  }
-}
-
-@media (max-width: 330px) {
-  .sidebar {
-    .sidebar__menu {
-      //padding-bottom: 3.4em;
-    }
-  }
-}
-
-@media (max-width: 323px) {
-  .main-menu__catalog {
-    margin-right: 2.8em;
-  }
-}
-
-@media (max-width: 320px) {
-  .sidebar {
-    .sidebar__menu {
-      //padding-bottom: 3.5em;
-    }
-  }
-
-  .form__left {
-    padding-right: 0.1em;
-  }
-
-  .form__right .form__bg {
-    width: 95%;
-  }
-}*/

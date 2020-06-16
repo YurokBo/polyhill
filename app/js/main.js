@@ -167,6 +167,8 @@ document.addEventListener('click', e => {
     dropDawnMenu(e);
     tabSwitcher(e);
     ratingClick(e, ratingItem);
+    menuBurgerActive(e);
+    submenuActive(e);
 });
 
 /*------rating---------*/
@@ -315,5 +317,24 @@ function tabSwitcher(e) {
     feedbackItem[itemsTargetNum].classList.add('feedback-active');
 }
 
+function menuBurgerActive(e) {
+    const burgerBtn = e.target.closest('.menu-burger__btn'),
+        menuBurger = document.querySelector('.menu-burger');
 
+    if(!burgerBtn) {
+        return
+    }
 
+    menuBurger.classList.toggle('menu-burger-active');
+}
+
+function submenuActive(e) {
+    const catalog = e.target.closest('.catalog'),
+        catalogSubmenu = document.querySelector('.catalog .catalog__submenu');
+
+    if(!catalog) {
+        return
+    }
+
+    catalogSubmenu.classList.toggle('catalog__submenu-active');
+}
