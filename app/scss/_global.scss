@@ -15,7 +15,7 @@ body {
   /*font-family: 'SF UI Display Medium';*/
   font-family: 'SF UI Display Regular';
   font-weight: 400;
-  @include adaptiv-font(16, 12);
+  @include adaptiv-font(16, 14);
   line-height: 1.44em;
   letter-spacing: 0.070em;
   color: $main-font-color;

@@ -281,13 +281,6 @@ function closeProfile(e, elem) {
     elem.classList.remove('active-profile');
 }
 
-let menuElem = document.getElementById('sweeties');
-let titleElem = menuElem.querySelector('.title');
-
-titleElem.onclick = function () {
-    menuElem.classList.toggle('open');
-};
-
 function dropDawnMenu(e) {
     const mobileMenu = e.target.closest('.mobile-menu__title'),
         menuOpen = document.querySelector('.mobile-menu');
@@ -319,22 +312,31 @@ function tabSwitcher(e) {
 
 function menuBurgerActive(e) {
     const burgerBtn = e.target.closest('.menu-burger__btn'),
-        menuBurger = document.querySelector('.menu-burger');
+        menuBurger = document.querySelector('.menu-burger'),
+        catalogSubmenu = document.querySelector('.catalog .catalog__submenu'),
+        catalogTitle = document.querySelector('.catalog__title');
 
     if(!burgerBtn) {
         return
     }
 
     menuBurger.classList.toggle('menu-burger-active');
+
+    if (!menuBurger.classList.contains('menu-burger-active')) {
+        catalogSubmenu.classList.remove('catalog__submenu-active');
+        catalogTitle.classList.remove('catalog__title-active');
+    }
 }
 
 function submenuActive(e) {
     const catalog = e.target.closest('.catalog'),
-        catalogSubmenu = document.querySelector('.catalog .catalog__submenu');
+        catalogSubmenu = document.querySelector('.catalog .catalog__submenu'),
+        catalogTitle = document.querySelector('.catalog__title');
 
     if(!catalog) {
         return
     }
 
     catalogSubmenu.classList.toggle('catalog__submenu-active');
+    catalogTitle.classList.toggle('catalog__title-active');
 }

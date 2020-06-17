@@ -8,20 +8,24 @@
 .header {
   width: 100%;
   background-color: #E5F0F7;
+  z-index: 1000;
 }
 
 .header__content,
 .footer__content {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 37px 28px 32px 0;
 }
-
+.footer__content {
+  align-items: start;
+}
 .header__logo,
 .footer__logo {
   font-family: 'SF UI Display Bold';
   font-weight: 700;
-  @include adaptiv-font(30, 26);
+  @include adaptiv-font(30, 22);
   letter-spacing: -1px;
   //line-height: 1.37;
   color: $main-font-color;
@@ -85,7 +89,7 @@
     font-family: "Flaticon";
     content: "\f100";
     color: $icon-color;
-    @include adaptiv-font(29, 25);
+    @include adaptiv-font(29, 29);
     left: 0;
     top: 50%;
     transform: translateY(-50%);
@@ -320,10 +324,6 @@
   }
 }
 
-.mobile-menu__group {
-  display: none;
-}
-
 .menu,
 .footer__menu {
   display: flex;
@@ -393,6 +393,23 @@
       background-position: center;
       left: 0;
       top: 0;
+    }
+    span {
+      display: inline-block;
+      //position: absolute;
+      text-align: center;
+      font-family: 'SF UI Display Bold';
+      font-weight: 700;
+      line-height: 1.53em;
+      @include adaptiv-font(14, 14);
+      letter-spacing: 0.150em;
+      color: $icon-color;
+      width: 27px;
+      height: 27px;
+      border-radius: 50%;
+      background-color: #E5F0F7;
+      padding-top: 14%;
+
 
     }
   }
@@ -429,29 +446,63 @@
     }
   }
 
-  .menu__like,
-  .menu__bar,
-  .menu__basket {
-    span {
-      display: inline-block;
-      //position: absolute;
-      text-align: center;
-      font-family: 'SF UI Display Bold';
-      font-weight: 700;
-      line-height: 1.53em;
-      @include adaptiv-font(14, 11);
-      letter-spacing: 0.150em;
-      color: $icon-color;
-      width: 27px;
-      height: 27px;
-      border-radius: 50%;
-      background-color: #E5F0F7;
-      padding-top: 14%;
+}
 
+/*-------search form-------*/
+.search {
+  position: relative;
+  margin-right: 40px;
+  background: transparent;
+  border-radius: 50%;
+  height: 50px;
 
+  input {
+    height: 100%;
+    width: 50px;
+    padding: 0 42px 0 15px;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    transition: .4s cubic-bezier(0, 0.8, 0, 1);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    background-color: transparent;
+    &::placeholder {
+      background-color: $main-bg-color;
+      padding: 30px 10px;
+    }
+
+    &:focus {
+      width: 300px;
+      height: 100%;
+      border-radius: 25px;
+      z-index: 1;
+      background-color: $main-bg-color;
     }
   }
+
+  button {
+    z-index: 100;
+    position: absolute;
+    right: 0;
+    top: 52%;
+    transform: translate(0, -50%);
+    width: 40px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    img {
+      width: 100%;
+    }
+  }
+
 }
+
+/*-------------------------*/
 
 .content {
   .content__wrapper {
@@ -975,7 +1026,9 @@
 /*---------------------------index card styles-----------------------------------*/
 /*---------main-menu-----------------*/
 .main-menu {
-  padding: 1.4em 0 2.5em;
+  padding: 22px 0 40px;
+  z-index: 1000;
+  position: relative;
 }
 
 .main-menu__inner {
@@ -996,7 +1049,7 @@
   align-items: center;
   font-family: 'SF UI Display Medium';
   font-weight: 500;
-  @include adaptiv-font(18, 14);
+  @include adaptiv-font(18, 18);
   line-height: 1.28em;
   letter-spacing: 0.070em;
   color: $main-font-color;
@@ -1030,14 +1083,21 @@
 
 /*---------------------main-menu__inner---------------*/
 .main-menu__inner {
+
   .sidebar {
     position: absolute;
-    overflow: hidden;
+    display: block;
+    max-width: 500px;
+    font-size: 18px;
 
     .sidebar__menu {
-      margin-top: -48rem;
-      z-index: -10;
+      padding: 55px 86px 43px 60px;
+      margin-top: 0;
+      z-index: 10;
       transition: all .5s;
+      top: 455px;
+      transform: scaleY(0);
+      transform-origin: 0 0;
 
       li:last-child {
         padding-top: 2.83em;
@@ -1045,7 +1105,8 @@
     }
 
     .active {
-      margin-top: 0;
+      transform: scaleY(1);
+      transition: all .3s;
     }
   }
 }
@@ -1127,9 +1188,9 @@
 
 /*---------------breadcrumbs-------------------*/
 .breadcrumbs {
-  padding-bottom: 1.78em;
+  padding-bottom: 28px;
   position: relative;
-  z-index: -20;
+  z-index: 0;
 
   .breadcrumbs__inner {
     li {
@@ -1143,12 +1204,12 @@
     }
 
     li + li {
-      padding-left: 1.2em;
+      padding-left: 19px;
     }
 
     a {
       position: relative;
-      padding-right: 1.34em;
+      padding-right: 21px;
       color: #cac7dc;
 
       img {
@@ -1157,7 +1218,7 @@
         right: 0;
         top: 50%;
         transform: translateY(-50%);
-        max-width: .5em;
+        max-width: 8px;
         width: 100%;
       }
     }
@@ -1331,54 +1392,55 @@
 /*----------------index-workscheme---------------*/
 /*------------------workscheme-------------------*/
 .workscheme {
-  padding: .96em 0 7.5em 0;
+  padding: 10px 0 124px 0;
   text-align: center;
 }
 
 .workscheme__title {
-  padding-bottom: 1.75em;
+  padding-bottom: 88px;
 }
 
 .workscheme__scheme {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .workscheme__scheme-item {
   width: 100%;
 
   &:nth-child(1) {
-    max-width: 20.2%;
+    max-width: 248px;
 
     img {
-      max-width: 36%;
+      max-width: 90px;
       width: 100%;
     }
   }
 
   &:nth-child(2) {
-    max-width: 20%;
+    max-width: 238px;
 
     img {
-      max-width: 50%;
+      max-width: 124px;
       width: 100%;
     }
   }
 
   &:nth-child(3) {
-    max-width: 21.4%;
+    max-width: 272px;
 
     img {
-      max-width: 48.5%;
+      max-width: 129px;
       width: 100%;
     }
   }
 
   &:nth-child(4) {
-    max-width: 20%;
+    max-width: 242px;
 
     img {
-      max-width: 38.1%;
+      max-width: 95px;
       width: 100%;
     }
   }
@@ -1386,21 +1448,21 @@
   .workscheme__scheme-img {
     max-width: 100%;
     width: 100%;
-    height: 6.5em;
+    height: 104px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: .03em;
+    margin-bottom: 4px;
   }
 
   .workscheme__scheme-title {
     font-family: 'SF UI Display Bold';
     font-weight: 700;
     line-height: 1.52em;
-    @include adaptiv-font(23, 19);
+    @include adaptiv-font(23, 23);
     letter-spacing: 0.042em;
     color: $def-title-color;
-    padding: .94em 0 .33em;
+    padding: 34px 0 18px;
   }
 
   .workscheme__scheme-description {
@@ -1501,6 +1563,7 @@
   font-weight: 500;
 }
 
+
 .feedback__tab-item {
   max-width: 880px;
   width: 100%;
@@ -1508,6 +1571,7 @@
   border-radius: 15px;
   align-items: center;
 }
+
 
 .feedback__item-left {
   max-width: 372px;
