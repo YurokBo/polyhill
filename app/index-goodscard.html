@@ -17,14 +17,49 @@
 <header class="header">
     <div class="container">
         <div class="header__content">
+            <div class="menu-burger__btn"></div>
+            <div class="menu-burger">
+                <ul>
+                    <li class="catalog">
+                        <span class="catalog__title">Каталог товаров</span>
+                        <ul class="catalog__submenu">
+                            <li><a href="#"><img src="img/pair-shoe-cover.png" alt="pair-shoe-cover">Бахилы</a></li>
+                            <li><a href="index-workscheme.html"><img src="img/hat.png" alt="hat">Одноразовые шапочки</a>
+                            </li>
+                            <li><a href="#"><img src="img/sleeve-protectors.png" alt="sleeve-protectors">Одноразовые
+                                нарукавники</a></li>
+                            <li><a href="#"><img src="img/apron.png" alt="apron">Одноразовые фартуки</a></li>
+                            <li><a href="#"><img src="img/mask.png" alt="mask">Одноразовые маски</a></li>
+                            <li><a href="#"><img src="img/bedsheet.png" alt="bedsheet">Одноразовые простыни</a></li>
+                            <li><a href="#"><img src="img/package.png" alt="package">Одноразовые пакеты</a></li>
+                            <li><a href="#"><img src="img/suit.png" alt="suit">Защитные костюмы</a></li>
+                            <li><a href="#"><img src="img/skin.png" alt="skin">Пленку для бахиломаши</a></li>
+                            <li><a href="#"><img src="img/shoe-cover-machine.png" alt="shoe-cover-machine">Бахиломашины</a>
+                        </ul>
+                    </li>
+                    <li><a href="#">Доставка</a></li>
+                    <li><a href="index-feedback.html">Отзывы</a></li>
+                    <li><a href="index-workscheme.html">Схема работы</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+                <div class="menu-burger__profile">
+                    <a href="#" class="menu-burger__profile-login">
+                        Вход
+                    </a>
+                    <a href="#" class="menu-burger__profile-registration">
+                        Регистрация
+                    </a>
+                </div>
+            </div>
             <div class="header__logo">
-                <a href="#">Полихилл.</a>
+                <a href="index.html">Полихилл.</a>
             </div>
             <div class="header__address">
                 Москва, Каширское шоссе 3к2 стр.8
             </div>
             <div class="header__phone">
                 <a href="tel:+74950904545">
+                    <img src="img/phone.png" alt="phone">
                     +7(495) 090-45-45
                 </a>
             </div>
@@ -81,16 +116,19 @@
                     <li><a href="#">Контакты</a></li>
                 </ul>
                 <div class="menu-group" data-da="header__content,last,1270">
-                    <form class="search" action="">
-                        <label>
-                            <button type="submit"><img src="img/magnifier.svg" alt="magnifier"></button>
-                            <input type="search" name="search" placeholder="Поиск...">
-                        </label>
-                    </form>
-                    <a href="#" class="menu__like">
+                    <div class="search-bar">
+                        <form>
+                            <label>
+                                <input class="search-bar__input" type="search" name="search" placeholder="">
+                                <button class="search-bar__submit" type="submit"></button>
+                                <span class="search-bar__icon"><img src="img/magnifier.svg" alt=""></span>
+                            </label>
+                        </form>
+                    </div>
+                    <a href="#" class="menu__like" data-da="menu-burger,last,1024">
                         <span class="menu__like-amount">+1</span>
                     </a>
-                    <a href="#" class="menu__bar">
+                    <a href="#" class="menu__bar" data-da="menu-burger,last,1024">
                         <span class="menu__bar-amount">+1</span>
                     </a>
                     <a href="#" class="menu__basket">
@@ -126,7 +164,7 @@
 <section class="description">
     <div class="container">
         <div class="description__inner">
-            <div class="description__img">
+            <div class="description__img" data-da="description__inner,last,716">
                 <img src="img/description-img.png" alt="description-img">
                 <div class="description__bg"></div>
             </div>
@@ -302,9 +340,8 @@
                         <a href="#">Скачать</a>
                     </div>
                 </div>
-                <div class="footer__map">
-                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Afa2c31a183d5bc68936bfe0bc0e092971140ff4301ba2062a07d0fdc84a2236f&amp;source=constructor"
-                            frameborder="0"></iframe>
+                <div class="footer__map" id="map">
+
                 </div>
             </div>
             <div class="footer__content">
@@ -360,6 +397,7 @@
 </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=3902c5d4-66a6-4af8-8584-34d6dd0153e5" type="text/javascript"></script>
 <script src="js/all.min.js"></script>
 <script src="js/libs.min.js"></script>
 <script src="js/main.js"></script>

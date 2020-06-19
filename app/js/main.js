@@ -165,81 +165,86 @@ document.addEventListener('click', e => {
     openProfile(e, headerProfileMobile);
     closeProfile(e, headerProfileMobile);
     dropDawnMenu(e);
-    tabSwitcher(e);
-    ratingClick(e, ratingItem);
     menuBurgerActive(e);
     submenuActive(e);
+    openInput(e);
+    feedBackItemSwitcher(e);
+    ratingClick (e)
 });
 
 /*------rating---------*/
 /*------наведение мыши-------*/
-document.addEventListener('mouseover', (e) => {
-    const ratingItem = document.querySelectorAll('.feedback__rating-item');
-    ratingMouseover(e, ratingItem);
-});
 
-document.addEventListener('mouseout', (e) => {
-    const ratingItem = document.querySelectorAll('.feedback__rating-item');
+const ratingItem = document.querySelectorAll('.feedback__rating-item');
 
-    mouseoutActiveClass(ratingItem);
-});
+/*   click event   */
 
-function ratingClick(e, elem) {
-    let target = e.target;
+function ratingClick (e) {
+    const target = e.target;
 
     if (target.classList.contains('feedback__rating-item')) {
-        removeClass(elem, 'currant-active');
-        target.classList.add('rating-item-active', 'current-active')
+        removeClass(ratingItem, 'currant-active');
+        target.classList.add('rating-item-active', 'currant-active');
     }
 }
+/*    mouseover event    */
+document.addEventListener('mouseover', e => {
+    ratingMouseOver(e)
+});
 
-function ratingMouseover(e, elem) {
-    let target = e.target;
+function ratingMouseOver(e) {
+    const target = e.target;
+
     if (target.classList.contains('feedback__rating-item')) {
-
-        removeClass(elem, 'rating-item-active', 'current-active');
+        removeClass(ratingItem, 'rating-item-active');
         target.classList.add('rating-item-active');
-        mouseoverActiveClass(elem);
+        mouseOverActiveClass(ratingItem);
     }
 }
 
-function removeClass(arr, elem) {
-    for (let i = 0, arrLen = arr.length; i < arrLen; i++) {
+document.addEventListener('mouseout', e => {
+    addClass(ratingItem, 'rating-item-active');
+    mouseOutActiveClass(ratingItem);
+});
+
+/*   function for remove active class   */
+function removeClass(arr) {
+    for (let i = 0, aLen = arr.length; i < aLen; i++) {
         for (let j = 1; j < arguments.length; j++) {
-            elem[i].classList.remove(arguments[j]);
+            ratingItem[i].classList.remove(arguments[j]);
         }
     }
 }
 
-function addClass(arr, elem) {
-
-    for (let i = 0, arrLen = arr.length; i < arrLen; i++) {
+function addClass(arr) {
+    for (let i = 0, aLen = arr.length; i < aLen; i++) {
         for (let j = 1; j < arguments.length; j++) {
-            elem[i].classList.add(arguments[j]);
+            ratingItem[i].classList.add(arguments[j]);
         }
     }
 }
 
-function mouseoverActiveClass(arr, elem) {
-    for (let i = 0, arrLen = arr.length; i < arrLen; i++) {
-        if (elem[i].classList.contains('rating-item-active')) {
+function mouseOverActiveClass(arr) {
+    for (let i = 0, aLen = arr.length; i < aLen; i++) {
+        if (arr[i].classList.contains('rating-item-active')) {
             break
         } else {
-            elem[i].classList.add('rating-item-active');
+            arr[i].classList.add('rating-item-active');
         }
     }
 }
 
-function mouseoutActiveClass(arr, elem) {
+function mouseOutActiveClass(arr) {
     for (let i = arr.length - 1; i >= 1; i--) {
-        if (elem[i].classList.contains('currant-active')) {
+        if (arr[i].classList.contains('currant-active')) {
             break
         } else {
-            elem[i].classList.remove('rating-item-active');
+            arr[i].classList.remove('rating-item-active');
         }
     }
-    addClass(elem, 'rating-item-active');
 }
+
+/*------rating finished---------*/
 
 function catalogMenu(e, elem) {
     const menu = e.target.closest('.main-menu__catalog');
@@ -249,7 +254,6 @@ function catalogMenu(e, elem) {
     }
     elem.classList.toggle('active');
 }
-/*------rating finished---------*/
 
 function catalog(e, elem) {
     const sidebarTop = e.target.closest('.sidebar__top');
@@ -291,32 +295,13 @@ function dropDawnMenu(e) {
     menuOpen.classList.toggle('open');
 }
 
-function tabSwitcher(e) {
-    const tabSelector = document.querySelectorAll('.feedback__tab-selector'),
-        feedbackItem = document.querySelectorAll('.feedback__item');
-
-
-    const itemsTargetNum = [...tabSelector].indexOf(e.target);
-
-    if (itemsTargetNum === -1) {
-        return;
-    }
-
-    document.querySelector('.tab-active').classList.remove('tab-active');
-    document.querySelector('.feedback-active').classList.remove('feedback-active');
-
-    //e.target.classList.add('tab-active');
-    e.target.alert('hello');
-    feedbackItem[itemsTargetNum].classList.add('feedback-active');
-}
-
 function menuBurgerActive(e) {
     const burgerBtn = e.target.closest('.menu-burger__btn'),
         menuBurger = document.querySelector('.menu-burger'),
         catalogSubmenu = document.querySelector('.catalog .catalog__submenu'),
         catalogTitle = document.querySelector('.catalog__title');
 
-    if(!burgerBtn) {
+    if (!burgerBtn) {
         return
     }
 
@@ -333,10 +318,79 @@ function submenuActive(e) {
         catalogSubmenu = document.querySelector('.catalog .catalog__submenu'),
         catalogTitle = document.querySelector('.catalog__title');
 
-    if(!catalog) {
+    if (!catalog) {
         return
     }
 
     catalogSubmenu.classList.toggle('catalog__submenu-active');
     catalogTitle.classList.toggle('catalog__title-active');
+}
+
+function openInput(e) {
+    const searchBarIcon = e.target.closest('.search-bar__icon'),
+        searchBarInput = document.querySelector('.search-bar__input');
+
+    if (!searchBarIcon) {
+        return
+    }
+
+    searchBarInput.classList.add('open-input');
+
+    if (!searchBarInput) {
+        alert('hello')
+    }
+
+}
+
+const searchBarInput = document.querySelector('.search-bar__input');
+searchBarInput.addEventListener('blur', function () {
+    searchBarInput.classList.remove('open-input');
+    searchBarInput.value = '';
+});
+
+/*   change feedback items   */
+function feedBackItemSwitcher(e) {
+    const tabSelectors = document.querySelectorAll('.feedback__tab-photo'),
+        feedbackTabItems = document.querySelectorAll('.feedback__item');
+
+   /* const tab = e.target.closest('.feedback__tab-selector');
+
+    if (tab) {
+        console.log(feedbackTabItems)
+    }*/
+
+    const itemsTargetNum = [...tabSelectors].indexOf(e.target);
+
+    if(itemsTargetNum === -1) {
+        return;
+    }
+
+    document.querySelector('.tab-selected').classList.remove('tab-selected');
+    document.querySelector('.feedback__item-active').classList.remove('feedback__item-active');
+
+    e.target.classList.add('tab-selected');
+    feedbackTabItems[itemsTargetNum].classList.add('feedback__item-active')
+}
+
+
+/*--------------map-------------*/
+var myMap;
+
+// Дождёмся загрузки API и готовности DOM.
+ymaps.ready(init);
+
+function init() {
+    var myMap = new ymaps.Map("map", {
+        center: [55.673336, 37.633401],
+        zoom: 15
+    }, {
+        searchControlProvider: 'yandex#search'
+    });
+
+    myMap.geoObjects
+        .add(new ymaps.Placemark([55.673336, 37.633401], {
+            preset: 'islands#icon',
+            iconColor: '#0095b6'
+        }));
+
 }

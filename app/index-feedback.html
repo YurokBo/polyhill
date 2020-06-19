@@ -58,6 +58,7 @@
             </div>
             <div class="header__phone">
                 <a href="tel:+74950904545">
+                    <img src="img/phone.png" alt="phone">
                     +7(495) 090-45-45
                 </a>
             </div>
@@ -114,16 +115,19 @@
                     <li><a href="#">Контакты</a></li>
                 </ul>
                 <div class="menu-group" data-da="header__content,last,1270">
-                    <form class="search" action="">
-                        <label>
-                            <button type="submit"><img src="img/magnifier.svg" alt="magnifier"></button>
-                            <input type="search" name="search" placeholder="Поиск...">
-                        </label>
-                    </form>
-                    <a href="#" class="menu__like">
+                    <div class="search-bar">
+                        <form>
+                            <label>
+                                <input class="search-bar__input" type="search" name="search" placeholder="">
+                                <button class="search-bar__submit" type="submit"></button>
+                                <span class="search-bar__icon"><img src="img/magnifier.svg" alt=""></span>
+                            </label>
+                        </form>
+                    </div>
+                    <a href="#" class="menu__like" data-da="menu-burger,last,1024">
                         <span class="menu__like-amount">+1</span>
                     </a>
-                    <a href="#" class="menu__bar">
+                    <a href="#" class="menu__bar" data-da="menu-burger,last,1024">
                         <span class="menu__bar-amount">+1</span>
                     </a>
                     <a href="#" class="menu__basket">
@@ -164,8 +168,8 @@
         </div>
         <div class="feedback__inner">
             <div class="feedback__tab-selectors">
-                <div class="feedback__tab-selector tab-active">
-                    <img src="img/tab-photo.png" alt="" class="feedback__tab-photo">
+                <div class="feedback__tab-selector ">
+                    <img src="img/tab-photo.png" alt="" class="feedback__tab-photo tab-selected">
                     <div class="feedback__tab-name">Александра</div>
                 </div>
                 <div class="feedback__tab-selector">
@@ -182,7 +186,7 @@
                 </div>
             </div>
             <div class="feedback__tab-items">
-                <div class="feedback__item feedback-active">
+                <div class="feedback__item feedback__item-active">
                     <div class="feedback__item-left">
                         <div class="feedback__item-person">
                             <img src="img/item-photo.png" alt="photo" class="feedback__item-photo">
@@ -225,40 +229,50 @@
 
                     </div>
                 </div>
-                <div class="feedback__item">
+                <div class="feedback__item ">
                     <div class="feedback__item-left">
                         <div class="feedback__item-person">
                             <img src="img/item-photo.png" alt="photo" class="feedback__item-photo">
                             <img src="img/item-subscribe.png" alt="photo" class="feedback__item-subscribe">
                         </div>
                         <div class="feedback__item-description">
-                            <div class="feedback__item-name">Екатерина Анисимова</div>
+                            <div class="feedback__item-name">Татьяна Иванова</div>
                             <div class="feedback__item-position">Директ компании «Полихил»</div>
                         </div>
                     </div>
                     <div class="feedback__item-right">
-                        <div class="feedback__item-title">
+                        <div class="feedback__item-title default-title">
                             Сотрудничаем с «Полихил»
                             больше года. Всегда доставляют
                             в срок. Качеством довольны
                         </div>
-                        <div class="feedback__item-stars"></div>
-                        <p class="feedback__item-text">
-                            Таким образом начало повседневной работы по формированию позиции влечет за собой процесс
-                            внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
-                            Идейные соображения высшего порядка, а также новая модель деятельности
-                            в значительной степени обуславливает создание систем массового участия.
+                        <div class="feedback__rating">
+                            <div class="feedback__rating-item rating-item-active" data-rate="1"></div>
+                            <div class="feedback__rating-item" data-rate="2"></div>
+                            <div class="feedback__rating-item" data-rate="3"></div>
+                            <div class="feedback__rating-item" data-rate="4"></div>
+                            <div class="feedback__rating-item" data-rate="5"></div>
+                        </div>
+                        <div class="feedback__item-info">
+                            <p class="feedback__item-text">
+                                Таким образом начало повседневной работы по формированию позиции влечет за собой процесс
+                                внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
+                                Идейные соображения высшего порядка, а также новая модель деятельности
+                                в значительной степени обуславливает создание систем массового участия.
+                            </p>
+                            <p class="feedback__item-text">
+                                Таким образом сложившаяся структура организации позволяет выполнять важные задания по
+                                разработке позиций, занимаемых участниками в отношении поставленных задач. Значимость этих
+                                проблем настолько очевидна, что укрепление и развитие структуры обеспечивает широкому кругу
+                                (специалистов) участие в формировании систем массового участия. Равным образом постоянный
+                                количественный рост и сфера нашей активности играет важную роль в формировании существенных
+                                финансовых и административных условий.
+                            </p>
+                        </div>
 
-                            Таким образом сложившаяся структура организации позволяет выполнять важные задания по
-                            разработке позиций, занимаемых участниками в отношении поставленных задач. Значимость этих
-                            проблем настолько очевидна, что укрепление и развитие структуры обеспечивает широкому кругу
-                            (специалистов) участие в формировании систем массового участия. Равным образом постоянный
-                            количественный рост и сфера нашей активности играет важную роль в формировании существенных
-                            финансовых и административных условий.
-                        </p>
                     </div>
                 </div>
-                <div class="feedback__item">
+                <div class="feedback__item ">
                     <div class="feedback__item-left">
                         <div class="feedback__item-person">
                             <img src="img/item-photo.png" alt="photo" class="feedback__item-photo">
@@ -270,28 +284,38 @@
                         </div>
                     </div>
                     <div class="feedback__item-right">
-                        <div class="feedback__item-title">
+                        <div class="feedback__item-title default-title">
                             Сотрудничаем с «Полихил»
                             больше года. Всегда доставляют
                             в срок. Качеством довольны
                         </div>
-                        <div class="feedback__item-stars"></div>
-                        <p class="feedback__item-text">
-                            Таким образом начало повседневной работы по формированию позиции влечет за собой процесс
-                            внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
-                            Идейные соображения высшего порядка, а также новая модель деятельности
-                            в значительной степени обуславливает создание систем массового участия.
+                        <div class="feedback__rating">
+                            <div class="feedback__rating-item rating-item-active" data-rate="1"></div>
+                            <div class="feedback__rating-item" data-rate="2"></div>
+                            <div class="feedback__rating-item" data-rate="3"></div>
+                            <div class="feedback__rating-item" data-rate="4"></div>
+                            <div class="feedback__rating-item" data-rate="5"></div>
+                        </div>
+                        <div class="feedback__item-info">
+                            <p class="feedback__item-text">
+                                Таким образом начало повседневной работы по формированию позиции влечет за собой процесс
+                                внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
+                                Идейные соображения высшего порядка, а также новая модель деятельности
+                                в значительной степени обуславливает создание систем массового участия.
+                            </p>
+                            <p class="feedback__item-text">
+                                Таким образом сложившаяся структура организации позволяет выполнять важные задания по
+                                разработке позиций, занимаемых участниками в отношении поставленных задач. Значимость этих
+                                проблем настолько очевидна, что укрепление и развитие структуры обеспечивает широкому кругу
+                                (специалистов) участие в формировании систем массового участия. Равным образом постоянный
+                                количественный рост и сфера нашей активности играет важную роль в формировании существенных
+                                финансовых и административных условий.
+                            </p>
+                        </div>
 
-                            Таким образом сложившаяся структура организации позволяет выполнять важные задания по
-                            разработке позиций, занимаемых участниками в отношении поставленных задач. Значимость этих
-                            проблем настолько очевидна, что укрепление и развитие структуры обеспечивает широкому кругу
-                            (специалистов) участие в формировании систем массового участия. Равным образом постоянный
-                            количественный рост и сфера нашей активности играет важную роль в формировании существенных
-                            финансовых и административных условий.
-                        </p>
                     </div>
                 </div>
-                <div class="feedback__item">
+                <div class="feedback__item ">
                     <div class="feedback__item-left">
                         <div class="feedback__item-person">
                             <img src="img/item-photo.png" alt="photo" class="feedback__item-photo">
@@ -303,25 +327,35 @@
                         </div>
                     </div>
                     <div class="feedback__item-right">
-                        <div class="feedback__item-title">
+                        <div class="feedback__item-title default-title">
                             Сотрудничаем с «Полихил»
                             больше года. Всегда доставляют
                             в срок. Качеством довольны
                         </div>
-                        <div class="feedback__item-stars"></div>
-                        <p class="feedback__item-text">
-                            Таким образом начало повседневной работы по формированию позиции влечет за собой процесс
-                            внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
-                            Идейные соображения высшего порядка, а также новая модель деятельности
-                            в значительной степени обуславливает создание систем массового участия.
+                        <div class="feedback__rating">
+                            <div class="feedback__rating-item rating-item-active" data-rate="1"></div>
+                            <div class="feedback__rating-item" data-rate="2"></div>
+                            <div class="feedback__rating-item" data-rate="3"></div>
+                            <div class="feedback__rating-item" data-rate="4"></div>
+                            <div class="feedback__rating-item" data-rate="5"></div>
+                        </div>
+                        <div class="feedback__item-info">
+                            <p class="feedback__item-text">
+                                Таким образом начало повседневной работы по формированию позиции влечет за собой процесс
+                                внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
+                                Идейные соображения высшего порядка, а также новая модель деятельности
+                                в значительной степени обуславливает создание систем массового участия.
+                            </p>
+                            <p class="feedback__item-text">
+                                Таким образом сложившаяся структура организации позволяет выполнять важные задания по
+                                разработке позиций, занимаемых участниками в отношении поставленных задач. Значимость этих
+                                проблем настолько очевидна, что укрепление и развитие структуры обеспечивает широкому кругу
+                                (специалистов) участие в формировании систем массового участия. Равным образом постоянный
+                                количественный рост и сфера нашей активности играет важную роль в формировании существенных
+                                финансовых и административных условий.
+                            </p>
+                        </div>
 
-                            Таким образом сложившаяся структура организации позволяет выполнять важные задания по
-                            разработке позиций, занимаемых участниками в отношении поставленных задач. Значимость этих
-                            проблем настолько очевидна, что укрепление и развитие структуры обеспечивает широкому кругу
-                            (специалистов) участие в формировании систем массового участия. Равным образом постоянный
-                            количественный рост и сфера нашей активности играет важную роль в формировании существенных
-                            финансовых и административных условий.
-                        </p>
                     </div>
                 </div>
             </div>
@@ -351,9 +385,8 @@
                         <a href="#">Скачать</a>
                     </div>
                 </div>
-                <div class="footer__map">
-                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Afa2c31a183d5bc68936bfe0bc0e092971140ff4301ba2062a07d0fdc84a2236f&amp;source=constructor"
-                             frameborder="0"></iframe>
+                <div class="footer__map" id="map">
+
                 </div>
             </div>
             <div class="footer__content">
@@ -409,6 +442,7 @@
 </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=3902c5d4-66a6-4af8-8584-34d6dd0153e5" type="text/javascript"></script>
 <script src="js/all.min.js"></script>
 <script src="js/libs.min.js"></script>
 <script src="js/main.js"></script>
