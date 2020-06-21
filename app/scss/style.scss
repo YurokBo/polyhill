@@ -24,7 +24,8 @@
 }
 
 .header__logo,
-.footer__logo {
+.footer__logo,
+.description__content-info-logo {
   font-family: 'SF UI Display Bold';
   font-weight: 700;
   @include adaptiv-font(30, 22);
@@ -66,7 +67,7 @@
   &::before {
     position: absolute;
     font-family: "Flaticon";
-    content: "\f103";
+    content: "\f107";
     color: $icon-color;
     @include adaptiv-font(29, 25);
     left: 0;
@@ -89,7 +90,7 @@
   &::before {
     position: absolute;
     font-family: "Flaticon";
-    content: "\f100";
+    content: "\f106";
     color: $icon-color;
     @include adaptiv-font(29, 29);
     left: 0;
@@ -438,7 +439,7 @@
 
   &::before {
     background-image: url('../img/heart.png');
-    width: 32px;
+    width: 33px;
     height: 30px;
   }
 }
@@ -957,7 +958,7 @@
       &::before {
         position: absolute;
         font-family: Flaticon;
-        content: "\f100";
+        content: "\f106";
         @include adaptiv-font(28, 24);
         color: $icon-color;
         left: 0;
@@ -973,7 +974,7 @@
       &::before {
         position: absolute;
         font-family: Flaticon;
-        content: "\f103";
+        content: "\f107";
         @include adaptiv-font(28, 24);
         color: $icon-color;
         left: 0;
@@ -989,7 +990,7 @@
       &::before {
         position: absolute;
         font-family: Flaticon;
-        content: "\f101";
+        content: "\f108";
         @include adaptiv-font(28, 24);
         color: $icon-color;
         left: 0;
@@ -1211,7 +1212,7 @@
       &::before {
         position: absolute;
         font-family: Flaticon;
-        content: "\f102";
+        сontent: "\f109";
         @include adaptiv-font(36, 32);
         line-height: 1.53em;
         left: 0;
@@ -1273,7 +1274,11 @@
 
 /*------------description---------------*/
 .description {
+  padding: 30px 0 17px;
+}
 
+.description__title-box {
+  margin-bottom: 38px;
 }
 
 .description__inner {
@@ -1288,17 +1293,19 @@
 
 .description__img {
   text-align: center;
-  top: 50%;
   background-color: #f2edf4;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  padding: 54px 0 19px;
   position: relative;
   z-index: -100;
 
   img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 10;
-    max-width: 227px;
+    max-width: 575px;
     width: 100%;
   }
 
@@ -1308,31 +1315,132 @@
     height: 384px;
     border-radius: 50%;
     background-color: #a79edc;
-    left: 49.95%;
-    top: 51.2%;
+    left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
     z-index: -1;
   }
 }
 
+.description__img-icon-like,
+.description__img-icon-bar {
+  width: 100%;
+  position: absolute;
+}
+
+.description__img-icon-like {
+  max-width: 23px;
+  top: 83px;
+  right: 30px;
+}
+
+.description__img-icon-bar {
+  max-width: 18px;
+  top: 122px;
+  right: 34px;
+}
+
 .description__content {
-  padding: 75px 112px 16px 152px;
   background-color: $main-bg-color;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
 
-.description__content-title {
-  padding-bottom: 3px;
+.description__content-top {
+  padding: 68px 27px 60px 114px;
+  border-bottom: 1px solid #787878;
 }
 
-.description__content-subtitle {
-  @include adaptiv-font(14, 11);
-  line-height: 1.43em;
-  letter-spacing: 0.070em;
-  color: #afb4b5;
-  padding-bottom: 28px;
+.description__content-info {
+  display: flex;
+  //justify-content: space-between;
+  vertical-align: top;
+
+  .description__content-info-vendor-code,
+  .description__content-info-rating {
+    margin-right: 38px;
+  }
 }
+
+.description__content-info-vendor-code {
+  font-size: 14px;
+  color: #c3c6c6;
+}
+
+.description__content-info-rating {
+
+  .rating {
+    overflow: hidden;
+  }
+
+  .rating-item {
+    margin-right: 2px;
+
+    &::before {
+      font-family: "Flaticon";
+      content: "\f104";
+      font-size: 19px;
+      cursor: pointer;
+      color: #a79edc;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .rating-item-active {
+    &::before {
+      content: "\f105";
+    }
+  }
+}
+
+.description__content-info-logo {
+  font-family: 'SF UI Display Bold';
+  font-weight: 700;
+  font-size: 14px;
+
+  a {
+    padding-left: 33px;
+
+    &::before {
+      width: 29px;
+      height: 28px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.description__content-price-top,
+.description__content-price-bottom {
+  display: flex;
+  //justify-content: space-between;
+
+  .description__content-prise-item {
+    max-width: 133px;
+    width: 100%;
+
+    span {
+      font-size: 20px;
+      font-weight: 700;
+    }
+  }
+}
+
+.description__content-price-top {
+  .description__content-prise-item {
+    &:first-child {
+      color: #afb4b5;
+    }
+  }
+}
+
+
+/*
+
 
 .description__content-specification {
   color: $grey-font-color;
@@ -1400,16 +1508,18 @@
       display: block;
     }
   }
-}
+}*/
 
 .description__content_btn-box {
   display: flex;
   justify-content: space-between;
   max-width: 302px;
   width: 100%;
+
   .quantity {
     max-width: 104px;
     width: 100%;
+
     input {
       padding: 15px 32px 15px;
     }
@@ -1704,17 +1814,17 @@
   }
 }
 
-.feedback__rating {
+.rating {
   display: flex;
   //margin-bottom: 0;
   max-width: 154px;
   justify-content: space-between;
 }
 
-.feedback__rating-item {
+.rating-item {
   &::before {
-    content: "\f106";
-    font-family: "Flaticon2";
+    content: "\f103";
+    font-family: "Flaticon";
     font-size: 25px;
     cursor: pointer;
   }

@@ -175,14 +175,14 @@ document.addEventListener('click', e => {
 /*------rating---------*/
 /*------наведение мыши-------*/
 
-const ratingItem = document.querySelectorAll('.feedback__rating-item');
+const ratingItem = document.querySelectorAll('.rating-item');
 
 /*   click event   */
 
 function ratingClick (e) {
     const target = e.target;
 
-    if (target.classList.contains('feedback__rating-item')) {
+    if (target.classList.contains('rating-item')) {
         removeClass(ratingItem, 'currant-active');
         target.classList.add('rating-item-active', 'currant-active');
     }
@@ -195,7 +195,7 @@ document.addEventListener('mouseover', e => {
 function ratingMouseOver(e) {
     const target = e.target;
 
-    if (target.classList.contains('feedback__rating-item')) {
+    if (target.classList.contains('rating-item')) {
         removeClass(ratingItem, 'rating-item-active');
         target.classList.add('rating-item-active');
         mouseOverActiveClass(ratingItem);

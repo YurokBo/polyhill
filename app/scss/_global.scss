@@ -110,7 +110,7 @@ h1,h2,h3,h4,h5,h6 {
     &::before {
       position: absolute;
       font-family: Flaticon;
-      content: "\f102";
+      content: "\f109";
       color: $icon-color;
       @include adaptiv-font(20, 16);
       right: 16px;

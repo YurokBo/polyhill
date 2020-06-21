@@ -1115,9 +1115,11 @@
     text-align: center;
     padding: 0 0 72px;
   }
-  .feedback-active {
+  .feedback__item-active {
     margin: 0 auto;
     max-width: 320px;
+    flex-wrap: wrap;
+
   }
 
   .feedback__item-right {
