@@ -169,7 +169,8 @@ document.addEventListener('click', e => {
     submenuActive(e);
     openInput(e);
     feedBackItemSwitcher(e);
-    ratingClick (e)
+    ratingClick (e);
+    detailsSwitcher(e);
 });
 
 /*------rating---------*/
@@ -353,12 +354,6 @@ function feedBackItemSwitcher(e) {
     const tabSelectors = document.querySelectorAll('.feedback__tab-photo'),
         feedbackTabItems = document.querySelectorAll('.feedback__item');
 
-   /* const tab = e.target.closest('.feedback__tab-selector');
-
-    if (tab) {
-        console.log(feedbackTabItems)
-    }*/
-
     const itemsTargetNum = [...tabSelectors].indexOf(e.target);
 
     if(itemsTargetNum === -1) {
@@ -370,6 +365,23 @@ function feedBackItemSwitcher(e) {
 
     e.target.classList.add('tab-selected');
     feedbackTabItems[itemsTargetNum].classList.add('feedback__item-active')
+}
+
+function detailsSwitcher(e) {
+    const detailsBtnItem = document.querySelectorAll('.details__btn-item'),
+        detailsDescrItem = document.querySelectorAll('.details__descr-item');
+
+    const itemsTargetNum = [...detailsBtnItem].indexOf(e.target);
+
+    if(itemsTargetNum === -1) {
+        return;
+    }
+
+    document.querySelector('.details__btn-item-active').classList.remove('details__btn-item-active');
+    document.querySelector('.details__descr-item-active').classList.remove('details__descr-item-active');
+
+    e.target.classList.add('details__btn-item-active');
+    detailsDescrItem[itemsTargetNum].classList.add('details__descr-item-active')
 }
 
 
@@ -393,4 +405,17 @@ function init() {
             iconColor: '#0095b6'
         }));
 
+}
+
+function onSubmit(token) {
+    document.getElementById("demo-form").submit();
+}
+
+function onClick(e) {
+    e.preventDefault();
+    grecaptcha.ready(function() {
+        grecaptcha.execute('reCAPTCHA_site_key', {action: 'submit'}).then(function(token) {
+            // Add your logic to submit to your backend server here.
+        });
+    });
 }

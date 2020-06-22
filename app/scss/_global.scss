@@ -55,7 +55,7 @@ h1,h2,h3,h4,h5,h6 {
   color: $btn-title-color;
   text-transform: uppercase;
   a {
-    padding: 1.1em 2.4em 0.99em 1.9em;
+    padding: 16px 38px 16px 30px;
     box-shadow: 2.736px 7.518px 56.64px 2.36px rgba(82, 208, 226, 0.34);
     background-color: $btn-bg-color;
     border-radius: 2em;
@@ -102,7 +102,7 @@ h1,h2,h3,h4,h5,h6 {
 .description__content-btn,
 .related__item-btn {
   a {
-    padding: 17px 60px 13px 25px;
+    padding: 15px 60px 15px 25px;
     position: relative;
     @include adaptiv-font(14, 12);
     cursor: pointer;
@@ -135,7 +135,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .description__content-btn {
   a {
-    padding: 17px 60px 13px 25px;
+    padding: 15px 60px 15px 25px;
   }
 }
 
