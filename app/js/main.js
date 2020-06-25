@@ -373,9 +373,16 @@ function detailsSwitcher(e) {
 
     const itemsTargetNum = [...detailsBtnItem].indexOf(e.target);
 
+    let detailsBtnItemActive = document.createElement('details__btn-item-active');
+    detailsBtnItemActive.type = 'text/css';
+    detailsBtnItemActive.innerHTML = '.details__btn-item-active { color: #F00; }';
+
+    detailsBtnItem.className = detailsBtnItemActive;
+
     if(itemsTargetNum === -1) {
         return;
     }
+
 
     document.querySelector('.details__btn-item-active').classList.remove('details__btn-item-active');
     document.querySelector('.details__descr-item-active').classList.remove('details__descr-item-active');
