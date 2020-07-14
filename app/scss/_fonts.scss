@@ -34,6 +34,19 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'SFUIDisplay-Light';
+  src: url('../fonts/SFUIDisplay-Light.eot');
+  src: url('../fonts/SFUIDisplay-Light.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/SFUIDisplay-Light.svg#SFUIDisplay-Light') format('svg'),
+  url('../fonts/SFUIDisplay-Light.ttf') format('truetype'),
+  url('../fonts/SFUIDisplay-Light.woff') format('woff'),
+  url('../fonts/SFUIDisplay-Light.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 /*
   Flaticon icon font: Flaticon
   Creation date: 18/05/2020 05:50
@@ -105,4 +118,8 @@
 
 .flaticon-supermarket:before {
   content: "\f109";
+}
+
+.flaticon-checked:before {
+  content: "\f10a";
 }

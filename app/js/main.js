@@ -169,8 +169,12 @@ document.addEventListener('click', e => {
     submenuActive(e);
     openInput(e);
     feedBackItemSwitcher(e);
-    ratingClick (e);
+    ratingClick(e);
     detailsSwitcher(e);
+
+    /*open popup*/
+    loginPopupOpen(e);
+    loginClosePopup(e);
 });
 
 /*------rating---------*/
@@ -180,7 +184,7 @@ const ratingItem = document.querySelectorAll('.rating-item');
 
 /*   click event   */
 
-function ratingClick (e) {
+function ratingClick(e) {
     const target = e.target;
 
     if (target.classList.contains('rating-item')) {
@@ -188,6 +192,7 @@ function ratingClick (e) {
         target.classList.add('rating-item-active', 'currant-active');
     }
 }
+
 /*    mouseover event    */
 document.addEventListener('mouseover', e => {
     ratingMouseOver(e)
@@ -356,7 +361,7 @@ function feedBackItemSwitcher(e) {
 
     const itemsTargetNum = [...tabSelectors].indexOf(e.target);
 
-    if(itemsTargetNum === -1) {
+    if (itemsTargetNum === -1) {
         return;
     }
 
@@ -379,10 +384,9 @@ function detailsSwitcher(e) {
 
     detailsBtnItem.className = detailsBtnItemActive;
 
-    if(itemsTargetNum === -1) {
+    if (itemsTargetNum === -1) {
         return;
     }
-
 
     document.querySelector('.details__btn-item-active').classList.remove('details__btn-item-active');
     document.querySelector('.details__descr-item-active').classList.remove('details__descr-item-active');
@@ -391,6 +395,34 @@ function detailsSwitcher(e) {
     detailsDescrItem[itemsTargetNum].classList.add('details__descr-item-active')
 }
 
+function loginPopupOpen(e) {
+    const openPopup = document.querySelector('.header__profile-login'),
+        loginPopup = document.querySelector('.login-popup'),
+        loginPopupBody = e.target.closest('.login-popup__body');
+
+
+    if (!openPopup) {
+        return
+    }
+
+    loginPopup.classList.add('login-popup__open');
+
+
+
+}
+
+function loginClosePopup(e) {
+    /*const loginPopupBody = e.target.closest('.login-popup__body'),
+        loginPopup = document.querySelector('.login-popup');
+
+    if (loginPopupBody) {
+        return
+    }
+    if (loginPopup) {
+        loginPopup.classList.remove('login-popup__open');
+    }*/
+
+}
 
 /*--------------map-------------*/
 var myMap;
@@ -420,8 +452,8 @@ function onSubmit(token) {
 
 function onClick(e) {
     e.preventDefault();
-    grecaptcha.ready(function() {
-        grecaptcha.execute('reCAPTCHA_site_key', {action: 'submit'}).then(function(token) {
+    grecaptcha.ready(function () {
+        grecaptcha.execute('reCAPTCHA_site_key', {action: 'submit'}).then(function (token) {
             // Add your logic to submit to your backend server here.
         });
     });

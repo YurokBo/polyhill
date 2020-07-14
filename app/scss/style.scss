@@ -2339,4 +2339,247 @@
 }
 
 
+/*-------order page---------*/
+.ordered {
+  padding: 0 0 202px;
+}
+
+.ordered__inner {
+  padding-left: 65px;
+  position: relative;
+  max-width: 850px;
+  width: 100%;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: url('../img/order-processed.png');
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 7px;
+    left: 0;
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.ordered__title-box {
+  margin-bottom: 35px;
+}
+
+.ordered__info {
+  font-size: 14px;
+  line-height: 1.57em;
+  color: $grey-font-color;
+
+  span {
+    font-family: 'SF UI Display Bold';
+    font-weight: 700;
+    color: #58585a;
+  }
+}
+
+.ordered__info_number,
+.ordered__info_track-progress,
+.ordered__info_methods-of-pay-delivery {
+  margin-bottom: 43px;
+}
+
+.ordered__info_number-of-order,
+.ordered__info_methods-of-pay {
+  margin-bottom: 20px;
+}
+
+.ordered__info_btn-box {
+  display: flex;
+}
+
+.ordered__info_btn-details {
+  margin-right: 25px;
+
+  a {
+    padding: 11.67px 25.91px 11.67px 25.91px;
+    border: 2px solid #54d9ec;
+
+    &:hover {
+      box-shadow: 2.736px 7.518px 56.64px 2.36px rgba(82, 208, 226, 0.64);
+    }
+  }
+}
+
+.ordered__info_btn-to-catalog {
+  color: #54d9ec;
+
+  a {
+    padding: 11.67px 33.78px 11.67px 33.79px;
+    background-color: transparent;
+    border: 2px solid #54d9ec;
+
+    &:hover {
+      box-shadow: 2.736px 7.518px 56.64px 2.36px rgba(82, 208, 226, 0.64);
+    }
+  }
+}
+
+
+/*-----------privacy-policy page------------*/
+.privacy-policy {
+  padding: 0 0 90px;
+}
+
+.privacy-policy__title-box {
+  margin-bottom: 40px;
+}
+
+.privacy-policy__info {
+  color: $grey-font-color;
+}
+
+.privacy-policy__info_introduction {
+  margin-bottom: 40px;
+}
+
+.privacy-policy__info_list {
+  ul {
+    /* убираем стандартную нумерацию */
+    list-style: none;
+    /* Идентифицируем счетчик и даем ему имя li. Значение счетчика не указано - по умолчанию оно равно 0 */
+    counter-reset: li;
+  }
+
+  li:before {
+    /* Определяем элемент, который будет нумероваться — li. Псевдоэлемент before указывает, что содержимое, вставляемое при помощи свойства content, будет располагаться перед пунктами списка. Здесь же устанавливается значение приращения счетчика (по умолчанию равно 1). */
+    counter-increment: li;
+    /* С помощью свойства content выводится номер пункта списка. counters() означает, что генерируемый текст представляет собой значения всех счетчиков с таким именем. Точка в кавычках добавляет разделяющую точку между цифрами, а точка с пробелом добавляется перед содержимым каждого пункта списка */
+    content: counters(li, ".") ". ";
+  }
+}
+
+.privacy-policy__info_list-title {
+  margin-bottom: 35px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+/*------registration page----------*/
+.registration {
+  padding: 0 0 100px;
+}
+
+.registration__title-box {
+  margin-bottom: 32px;
+}
+
+.registration__description {
+  max-width: 779px;
+  width: 100%;
+  margin-bottom: 55px;
+  font-size: 14px;
+  line-height: 1.57em;
+  color: $grey-font-color;
+
+  a {
+    color: #21cde6;
+  }
+
+  p + p {
+    margin-top: 22px;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.registration__form-list {
+  margin-bottom: 62px;
+}
+
+.registration__form_item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 24px 0 0;
+  margin-bottom: 31px;
+
+  label {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 16px;
+
+    font-family: 'SFUIDisplay-Light';
+    font-weight: 300;
+    font-size: 16px;
+    color: $grey-font-color;
+  }
+
+  input {
+    display: block;
+    width: 515px;
+    margin-right: 43px;
+
+    outline: none;
+    border: none;
+
+    background-color: rgb(249, 248, 248);
+    border-radius: 2em;
+
+    font-family: 'SF UI Display Regular';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.34em;
+    color: $grey-font-color;
+    padding: 13.34px 25px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.registration__form_description {
+  font-family: 'SFUIDisplay-Light';
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.5em;
+  color: #b8b7b7;
+}
+
+.registration__form_captcha {
+  margin-bottom: 55px;
+}
+
+.registration__form_btn-box {
+  margin-bottom: 32px;
+}
+
+.registration__form_btn {
+  padding: 14.17px 26.54px;
+}
+
+.registration__form_agreement {
+  font-family: 'SF UI Display Regular';
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.58em;
+  color: rgb(208, 206, 206);
+
+  a {
+    display: block;
+    color: #addfe6;
+  }
+}
+
+
+
+
+
+
+
 @import "media";

@@ -1,5 +1,6 @@
 @import "vars";
 @import "mixins";
+
 html {
   box-sizing: border-box;
 }
@@ -25,6 +26,8 @@ a {
   display: inline-block;
   text-decoration: none;
   color: inherit;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
 }
 
 ul,
@@ -34,7 +37,7 @@ li {
   list-style: none;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
@@ -54,11 +57,14 @@ h1,h2,h3,h4,h5,h6 {
   letter-spacing: 0.140em;
   color: $btn-title-color;
   text-transform: uppercase;
+
   a {
     padding: 16px 38px 16px 30px;
     box-shadow: 2.736px 7.518px 56.64px 2.36px rgba(82, 208, 226, 0.34);
     background-color: $btn-bg-color;
     border-radius: 2em;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
   }
 }
 
@@ -140,7 +146,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .content__advert-title,
-.description__content-title{
+.description__content-title {
   font-family: 'SF UI Display Bold';
   font-weight: 700;
   line-height: 1.37em;
@@ -246,4 +252,317 @@ h1,h2,h3,h4,h5,h6 {
   img {
     transform: rotate(180deg);
   }
+}
+
+/*-----login-popup-----*/
+/*-----password-recovery-----*/
+.login-popup,
+.password-recovery {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(23, 20, 27, 0.302);
+  top: 0;
+  left: 0;
+  z-index: 900;
+  padding: 20px;
+
+  opacity: 0;
+  visibility: hidden;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  transition: all .3s;
+}
+
+.password-recovery {
+  text-align: center;
+}
+
+.login-popup__open,
+.password-recovery__open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.login-popup__body,
+.password-recovery__body {
+  max-width: 495px;
+  width: 100%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  z-index: 999;
+}
+
+.login-popup__container,
+.password-recovery__container {
+  max-width: 355px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.login-popup__title-box,
+.password-recovery__title-box {
+  padding: 32px 0 30px;
+  background-color: #a79edc;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+
+  font-family: 'SF UI Display Bold';
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 1.3em;
+  letter-spacing: 0.042em;
+  color: #ffffff;
+}
+
+.login-popup__title {
+  position: relative;
+  padding-left: 60px;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+
+    background-image: url('../img/login-icon.png');
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 31px;
+    height: 31px;
+  }
+}
+
+.login-popup__form,
+.password-recovery__inner {
+  background-color: #f3eff5;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.login-popup__form {
+  padding: 49px 0;
+}
+
+.password-recovery__inner {
+  padding: 45px 0 55px;
+}
+
+.login-popup__form-inner,
+.password-recovery__info {
+  margin-bottom: 41px;
+}
+
+.password-recovery__form-inner {
+  margin-bottom: 30px;
+}
+
+.login-popup__login {
+  margin-bottom: 24px;
+}
+
+.login-popup__password {
+  margin-bottom: 21px;
+}
+
+.login-popup__login,
+.login-popup__password,
+.password-recovery__e-mail {
+  position: relative;
+  label,
+  input {
+    display: block;
+    outline: none;
+    border: none;
+    width: 100%;
+    border-radius: 2em;
+  }
+
+  label {
+    font-family: 'SFUIDisplay-Light';
+    font-weight: 300;
+    color: $grey-font-color;
+    padding-left: 18px;
+    margin-bottom: 10px;
+
+  }
+
+  input {
+    font-family: 'SF UI Display Regular';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.34em;
+    color: $grey-font-color;
+    padding: 13.34px 25px;
+  }
+
+  .input-clear__btn {
+    position: absolute;
+    right: 20px;
+    top: 57%;
+  }
+}
+
+.login-popup__remember {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'SFUIDisplay-Light';
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.67em;
+}
+
+.login-popup__remember-group {
+  color: #a4a4a4;
+  position: relative;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  .remember__input {
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+  }
+
+  .remember__label {
+    cursor: pointer;
+    padding-left: 18px;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 13px;
+      height: 13px;
+
+      border: 1px solid rgb(198, 198, 198);
+      border-radius: 2px;
+
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(0, -50%);
+      z-index: 1;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+
+      background-color: transparent;
+
+      opacity: 0;
+      transition: opacity .1s;
+
+      position: absolute;
+      top: 50%;
+      left: 1px;
+      transform: translate(0, -50%);
+      z-index: 2;
+    }
+  }
+}
+
+.remember__input:checked + .remember__label:before {
+  background-color: #00CEE8;
+  border: 2px solid #00CEE8;
+}
+
+.remember__input:checked + .remember__label:after {
+  opacity: 1;
+
+  font-family: "Flaticon";
+  content: "\f10a";
+  color: #ffffff;
+  font-size: 10px;
+}
+
+.login-popup__remember_forget {
+  color: #75bec9;
+
+  &:hover {
+    /*----------underline------------*/
+    background: 0 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, #75bec9 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=transparent, endColorstr=#75bec9, GradientType=0);
+    background-repeat: repeat-x;
+    background-position: 0 90%;
+    background-size: 1px 1px;
+    text-decoration: none;
+  }
+}
+
+.login-popup__btn-box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.login-popup__btn-login {
+  padding: 14px 50.47px 13px;
+
+  &:hover {
+    box-shadow: 2.736px 7.518px 56.64px 2.36px rgba(82, 208, 226, 0.64);
+  }
+}
+
+.login-popup__btn-registration {
+  a {
+    color: #54d9ec;
+    padding: 12.84px 29.5px;
+    background-color: transparent;
+    border: 2px solid #54d9ec;
+
+    &:hover {
+      box-shadow: 2.736px 7.518px 56.64px 2.36px rgba(82, 208, 226, 0.64);
+    }
+  }
+}
+
+.password-recovery__btn {
+  padding: 14.17px 27.8px;
+
+  &:hover {
+    box-shadow: 2.736px 7.518px 56.64px 2.36px rgba(82, 208, 226, 0.64);
+  }
+}
+
+.login-popup__info {
+  font-family: 'SFUIDisplay-Light';
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.5em;
+  color: #b8b7b7;
+}
+
+.password-recovery__info {
+  font-size: 16px;
+  line-height: 1.5em;
+  color: $grey-font-color;
+}
+
+
+/*---autofill---*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border:none !important;
+  -webkit-text-fill-color: inherit !important;
+  -webkit-box-shadow: 0 0 0px 1000px #FFFFFF inset;
+  transition: background-color 5000s ease-in-out 0s;
+
 }
