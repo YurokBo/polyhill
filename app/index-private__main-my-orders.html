@@ -152,86 +152,65 @@
                     <img src="img/arrow-right.png" alt="">
                     Личный кабинет
                 </a></li>
-                <li><a href="#">
-                    <img src="img/arrow-right.png" alt="">
-                    Регистрация
-                </a></li>
             </ul>
         </div>
     </div>
 </section>
 
-<section class="registration">
+<section class="private">
     <div class="container">
-        <div class="registration__title-box">
-            <h1 class="registration__title default-title">Регистрация</h1>
+        <div class="private__title-box">
+            <h1 class="private__title default-title">Мои заказы</h1>
         </div>
-        <div class="registration__description">
-            <div class="registration__description-inner">
-                <p>Зарегистрируйтесь, чтобы использовать все возможности личного кабинета: отслеживания заказов,
-                    настройки подписи, связи с профилем в ощиальных сетях и другие.</p>
-                <p>Уже зарегестрированы? <a href="#">Войдите</a> в личный кабинет.</p>
-                <p>Мы никогда и ни при каких условиях не разглашаем личные данные клиентов. Контактная информация
-                    будет использована только для оформления заказов и более удобной работы с сайтом. </p>
-            </div>
-        </div>
-        <div class="registration__form">
-            <form>
-                <div class="registration__form-inner">
-                    <div class="registration__form-list">
-                        <div class="registration__form_item">
-                            <label for="full-name">Ф.И.О. *</label>
-                            <input type="text" id="full-name" required>
-                            <div class="registration__form_description">
-                                Заполните, чтобы мы знали, как к Вам обращаться.
-                            </div>
-                        </div>
-                        <div class="registration__form_item">
-                            <label for="e-mail">E-mail *</label>
-                            <input type="text" id="e-mail" required>
-                            <div class="registration__form_description">
-                                Для отправки уведомлений о статусе заказа. Используйте его <br>
-                                как логин при входе в личный кабинет.
-                            </div>
-                        </div>
-                        <div class="registration__form_item">
-                            <label for="phone">Телефон *</label>
-                            <input type="text" id="phone" required>
-                            <div class="registration__form_description">
-                                Необходимо для уточнения деталей заказа.
-                            </div>
-                        </div>
-                        <div class="registration__form_item">
-                            <label for="password">Пароль *</label>
-                            <input type="text" id="password" required>
-                            <div class="registration__form_description">
-                                Пароль должен состоять минимум из 6 знаков.
-                            </div>
-                        </div>
-                        <div class="registration__form_item">
-                            <label for="repeat-password">Подтверждение пароля *</label>
-                            <input type="text" id="repeat-password" required>
-                            <div class="registration__form_description">
-                                Повторите пароль, введенный в предыдущем поле.
-                            </div>
+        <div class="private__content">
+            <div class="private__content_container">
+                <div class="private__sidebar">
+                    <div class="private__sidebar-menu">
+                        <div class="private__sidebar-menu-inner">
+                            <ul>
+                                <li><a href="#">Текущие заказы</a></li>
+                                <li><a href="#">Личные данные</a></li>
+                                <li><a href="#">Сменить пароль</a></li>
+                                <li><a href="#">История заказов</a></li>
+                                <li><a href="#">Профили заказов</a></li>
+                                <li><a href="#">Корзина</a></li>
+                                <li><a href="#">Подписки</a></li>
+                                <li><a href="#">Контакты</a></li>
+                                <li><a href="#" class="login-out">Выйти</a></li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="registration__form_captcha">
-                        <div class="g-recaptcha"
-                             data-sitekey="6Lf6KKgZAAAAAACjlC-jiKaHjT5rU0UgH1hkl2aF"></div>
-                        <div class="text-danger" id="recaptchaError"></div>
-                    </div>
-                    <div class="registration__form_btn-box">
-                        <button type="submit" class="registration__form_btn form__btn">
-                            зарегистрироваться
-                        </button>
-                    </div>
-                    <div class="registration__form_agreement">
-                        Нажимая на кнопку, вы даете согласие
-                        <a href="#">на обработку персоналных данных</a>
+                    <div class="private__sidebar-subscribe">
+                        <div class="private__sidebar-subscribe-form">
+                            <form>
+                                <div class="private__sidebar-subscribe-form_inner">
+                                    <label for="e-mail">Подписаться</label>
+                                    <input type="text" id="e-mail" placeholder="Ваш e-mail" name="e-mail">
+                                    <button type="submit"><img src="img/long-arrow-right-grey.png" alt="button">
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
-            </form>
+                <div class="private__content">
+                    <div class="private__content-inner">
+                        <div class="private__orders-without">
+                            <div class="private__orders-without_title-box">
+                                <div class="private__orders-without_title">
+                                    Текущие заказы не найдены.
+                                </div>
+                            </div>
+                            <div class="private__orders-without_links">
+                                <ul>
+                                    <li><a href="#">Посмотреть историю заказов</a></li>
+                                    <li><a href="#">Перейти в каталог</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>

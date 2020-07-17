@@ -748,6 +748,14 @@
       }
     }
   }
+
+  .registration__form_item {
+    display: block;
+
+    input {
+      margin: 0 0 10px 0;
+    }
+  }
 }
 
 @media screen and (max-width: 860px) {
@@ -1478,6 +1486,16 @@
       &:first-child {
         margin-bottom: 15px;
       }
+    }
+  }
+
+  .registration__form_item {
+
+    input {
+      width: 300px;
+    }
+    br {
+      display: none;
     }
   }
 }
