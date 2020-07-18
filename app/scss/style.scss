@@ -2504,7 +2504,8 @@
 
 .registration__form_item,
 .private-data__form_item,
-.change-password__form_item {
+.change-password__form_item,
+.subscribes__form_item {
   display: flex;
   align-items: center;
   position: relative;
@@ -2549,7 +2550,8 @@
 
 .registration__form_description,
 .private-data__form_description,
-.change-password__form_description {
+.change-password__form_description,
+.subscribes__form_description {
   font-family: 'SFUIDisplay-Light';
   font-weight: 300;
   font-size: 12px;
@@ -2578,7 +2580,8 @@
 
 .registration__form_agreement,
 .private-data__form_agreement,
-.change-password__form_agreement {
+.change-password__form_agreement,
+.subscribes__form_agreement {
   font-family: 'SF UI Display Regular';
   font-weight: 400;
   font-size: 12px;
@@ -2607,6 +2610,10 @@
 
 .private__title-box {
   margin-bottom: 43px;
+}
+
+.private__title {
+  @include adaptiv-font(45, 30);
 }
 
 .private__content_container {
@@ -2642,9 +2649,7 @@
     &:last-child {
       margin-bottom: 0;
     }
-  }
 
-  a {
     &:hover {
       color: #4ed7eb;
     }
@@ -2653,24 +2658,29 @@
   .sidebar-menu-active {
     color: #4ed7eb;
   }
+}
 
-  .login-out {
-    position: relative;
-    padding-left: 21px;
+.login-out {
 
-    &:before {
-      content: '';
-      display: block;
-      position: absolute;
-      background-image: url('../img/arrow-left.png');
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 6px;
-      height: 12px;
-      left: 0;
-      top: 50%;
-      transform: translate(0, -50%);
-    }
+  position: relative;
+  padding-left: 21px;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: url('../img/arrow-left.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 6px;
+    height: 12px;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+
+  &:hover {
+    color: #4ed7eb;
   }
 }
 
@@ -2754,6 +2764,10 @@
     &:hover {
       transform: scale(1.02);
     }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -2774,6 +2788,7 @@
     font-size: 22px;
     color: $grey-font-color;
     margin-bottom: 45px;
+    line-height: 1.5em;
   }
 
   .private__orders-without_links {
@@ -2808,6 +2823,352 @@
       margin-top: 30px;
     }
   }
+}
+
+.subscribes {
+  padding-top: 52px;
+}
+
+.subscribes__user-owner-box {
+  display: flex;
+  margin-bottom: 35px;
+}
+
+
+.subscribes__user-name {
+  color: #b2b0b0;
+  margin-right: 58px;
+  display: block;
+  max-width: 441px;
+  width: 100%;
+  letter-spacing: .060em;
+
+
+  .user-date {
+    font-family: 'SF UI Display Bold';
+    font-weight: 400;
+    display: inline-block;
+
+  }
+}
+
+.subscribes__user_change-user {
+  font-family: 'SFUIDisplay-Light';
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.5em;
+  color: #b8b7b7;
+  a {
+    color: #75d6e4;
+  }
+}
+
+.subscribes__form {
+
+}
+
+.subscribes__form_title-box {
+  font-size: 22px;
+  color: $grey-font-color;
+  margin-bottom: 35px;
+}
+
+.subscribes__form_item {
+  label,
+  input {
+    margin-right: 58px;
+    width: 441px;
+  }
+}
+
+.subscribes__form_description {
+  max-width: 346px;
+  width: 100%;
+}
+
+.subscribes__form_checkbox-inner {
+  padding-left: 18px;
+  font-family: 'SFUIDisplay-Light';
+  font-weight: 300;
+  color: $grey-font-color;
+  margin-bottom: 60px;
+}
+
+.subscribes__form_subscriptions-categories,
+.subscribes__form_subscriptions-format {
+  margin-bottom: 33px;
+}
+
+.subscribes__form_subscriptions-categories-title,
+.subscribes__form_subscriptions-format-title {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.categories__radio,
+.format__radio {
+  position: relative;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-size: 14px;
+
+  .categories__input,
+  .format__input {
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+  }
+
+  .categories__label,
+  .format__label {
+    font-size: 14px;
+    cursor: pointer;
+    padding-left: 36px;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 20px;
+
+      border: 1px solid #e8e8e8;
+      border-radius: 50%;
+
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(0, -50%);
+      z-index: 1;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+
+      background-color: transparent;
+
+      opacity: 0;
+      transition: opacity .1s;
+
+      position: absolute;
+      top: 50%;
+      left: 4px;
+      transform: translate(0, -50%);
+      z-index: 2;
+    }
+  }
+}
+
+.categories__input:checked + .categories__label:before,
+.format__input:checked + .format__label:before {
+  background-color: rgb(163, 157, 217);
+  border: 2px solid rgb(163, 157, 217);
+}
+
+.categories__input:checked + .categories__label:after,
+.format__input:checked + .format__label:after {
+  opacity: 1;
+
+  font-family: "Flaticon";
+  content: "\f10a";
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.categories__radio {
+  &:first-child {
+    margin-bottom: 20px;
+  }
+}
+
+.format__radio {
+  display: inline;
+
+  &:first-child {
+    margin-right: 44px;
+  }
+}
+
+.subscribes__form_btn-box {
+  display: flex;
+  margin-bottom: 32px;
+}
+
+.subscribes__form_btn-add {
+  margin-right: 25px;
+
+  .form__btn {
+    padding: 14.17px 26.36px;
+
+    &:hover,
+    &:active {
+      box-shadow: 2.736px 7.518px 56.64px 2.36px rgba(82, 208, 226, 0.64);
+    }
+  }
+}
+
+.subscribes__form_btn-cancel {
+  a {
+    color: #54d9ec;
+    padding: 12.17px 25.62px;
+    background-color: transparent;
+    border: 2px solid #54d9ec;
+
+    &:hover,
+    &:active {
+      box-shadow: 2.736px 7.518px 56.64px 2.36px rgba(82, 208, 226, 0.64);
+    }
+  }
+}
+
+/*contacts*/
+.contacts__contacts_top,
+.contacts__contacts_bottom {
+  margin-bottom: 40px;
+  font-family: 'SF UI Display Medium';
+  font-weight: 500;
+  color: #4a4665;
+}
+
+.contacts__contacts_top-phone,
+.contacts__contacts_top-email {
+  display: inline;
+  a {
+    position: relative;
+
+    &:before {
+      display: block;
+      position: absolute;
+      font-family: "Flaticon";
+      font-size: 28px;
+      color: #4ed7eb;
+      left: 0;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+  }
+}
+
+.contacts__contacts_top-phone {
+  font-size: 16px;
+  margin-right: 153px;
+
+  a {
+    padding-left: 50px;
+
+    &:before {
+      content: "\f106";
+    }
+  }
+}
+
+.contacts__contacts_top-email {
+  font-size: 18px;
+
+  a {
+    padding-left: 58px;
+
+    &:before {
+      content: "\f10b";
+    }
+  }
+}
+
+.contacts__map {
+  margin-bottom: 37px;
+}
+
+
+.contacts__contacts_bottom {
+  display: flex;
+  margin-bottom: 36px;
+}
+
+.contacts__contacts_bottom-contact {
+  margin-right: 77px;
+}
+
+.contacts__contacts_bottom-address,
+.contacts__contacts_bottom-work-time {
+  position: relative;
+  padding-left: 40px;
+
+  &:before {
+    display: block;
+    position: absolute;
+    font-family: "Flaticon";
+
+    color: #4ed7eb;
+
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+
+.contacts__contacts_bottom-address {
+  margin-bottom: 30px;
+
+  &:before {
+    content: "\f107";
+    font-size: 29px;
+    left: -2px;
+  }
+}
+
+.contacts__contacts_bottom-work-time {
+  color: #5b6065;
+
+  &:before {
+    content: "\f108";
+    font-size: 24px;
+    left: 0;
+  }
+}
+
+.contacts__payment-methods {
+  display: flex;
+}
+
+.contacts__payment-methods_title,
+.contacts__payment-methods_cash,
+.contacts__payment-methods_mastercard {
+  margin-right: 14px;
+}
+
+.contacts__payment-methods_cash {
+  color: #707478;
+}
+
+.contacts__payment-methods_content {
+  /*display: flex;*/
+  position: relative;
+  padding-right: 124px;
+
+  img {
+    position: absolute;
+  }
+
+  .mastercard {
+    right: 62px;
+    top: -3px;
+  }
+
+  .visa {
+    right: 0;
+    top: 2px;
+  }
+}
+
+.contacts__contacts_requisites {
+  font-size: 16px;
+}
+
+.contacts__contacts_requisites-title {
+  color: #707478;
+  margin-bottom: 35px;
+}
+
+.contacts__contacts_requisites-list {
+  color: #b2b0b0;
 }
 
 @import "media";
