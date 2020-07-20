@@ -173,7 +173,7 @@ document.addEventListener('click', e => {
     detailsSwitcher(e);
 
     /*open popup*/
-    loginPopupOpen(e);
+    //loginPopupOpen(e);
     loginClosePopup(e);
 });
 
@@ -395,7 +395,7 @@ function detailsSwitcher(e) {
     detailsDescrItem[itemsTargetNum].classList.add('details__descr-item-active')
 }
 
-function loginPopupOpen(e) {
+/*function loginPopupOpen(e) {
     const openPopup = document.querySelector('.header__profile-login'),
         loginPopup = document.querySelector('.login-popup'),
         loginPopupBody = e.target.closest('.login-popup__body');
@@ -409,7 +409,7 @@ function loginPopupOpen(e) {
 
 
 
-}
+}*/
 
 function loginClosePopup(e) {
     /*const loginPopupBody = e.target.closest('.login-popup__body'),

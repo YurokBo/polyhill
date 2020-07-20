@@ -953,7 +953,8 @@
       line-height: 4.45em;
       letter-spacing: 0.070em;
       color: $footer-contacts-color;
-      padding: 0 0 11px 50px;
+      padding: 0 0 0 50px;
+      margin-bottom: 11px;
 
       &::before {
         position: absolute;
@@ -962,6 +963,8 @@
         @include adaptiv-font(28, 24);
         color: $icon-color;
         left: 0;
+        top: 50%;
+        transform: translate(0, -50%);
       }
     }
 
@@ -969,7 +972,8 @@
       font-family: 'SF UI Display Medium';
       font-weight: 500;
       color: $def-title-color;
-      padding: 0 0 36px 42px;
+      padding: 0 0 0 42px;
+      margin-bottom: 36px;
 
       &::before {
         position: absolute;
@@ -978,6 +982,8 @@
         @include adaptiv-font(28, 24);
         color: $icon-color;
         left: 0;
+        top: 50%;
+        transform: translate(0, -50%);
       }
     }
 
@@ -985,7 +991,8 @@
       font-family: 'SF UI Display Medium';
       font-weight: 500;
       color: #5b6065;
-      padding: 0 0 39px 45px;
+      padding: 0 0 0 45px;
+      margin-bottom: 39px;
 
       &::before {
         position: absolute;
@@ -994,6 +1001,8 @@
         @include adaptiv-font(28, 24);
         color: $icon-color;
         left: 0;
+        top: 50%;
+        transform: translate(0, -50%);
       }
     }
   }
@@ -2874,7 +2883,7 @@
 }
 
 .subscribes__form_item {
-  label,
+
   input {
     margin-right: 58px;
     width: 441px;
