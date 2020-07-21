@@ -65,6 +65,10 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 2em;
     outline: none;
     -webkit-tap-highlight-color: transparent;
+
+    &:hover {
+      box-shadow: 2.736px 7.518px 56.64px 2.36px rgba(82, 208, 226, 0.64);
+    }
   }
 }
 
@@ -102,6 +106,10 @@ h1, h2, h3, h4, h5, h6 {
   outline: none;
   border: none;
   cursor: pointer;
+
+  &:hover {
+    box-shadow: 2.736px 7.518px 56.64px 2.36px rgba(82, 208, 226, 0.64);
+  }
 }
 
 .content__item-btn,
@@ -135,6 +143,10 @@ h1, h2, h3, h4, h5, h6 {
       height: 36.49px;
       background-color: #D4EEF6;
       border-radius: 50%;
+    }
+
+    &:hover {
+      box-shadow: 2.736px 7.518px 56.64px 2.36px rgba(82, 208, 226, 0.64);
     }
   }
 }
@@ -549,6 +561,14 @@ h1, h2, h3, h4, h5, h6 {
   color: $grey-font-color;
 }
 
+.feedback-popup__form_captcha {
+  width: 304px;
+  height: 78px;
+}
+.g-recaptcha {
+  width: 304px;
+  height: 78px;
+}
 
 /*---autofill---*/
 input:-webkit-autofill,

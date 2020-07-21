@@ -1006,12 +1006,13 @@
       }
     }
   }
+}
 
-  .footer__map {
-    max-width: 783px;
-    width: 100%;
-    min-height: 454px;
-  }
+.footer__map,
+.contacts__map {
+  max-width: 783px;
+  width: 100%;
+  min-height: 454px;
 }
 
 .footer__content {
@@ -1385,7 +1386,8 @@
   color: #c3c6c6;
 }
 
-.description__content-info-rating {
+.description__content-info-rating,
+.details__descr-feedbacks-rating {
 
   .rating {
     overflow: hidden;
@@ -1804,14 +1806,48 @@
 /*--details__descr-feedbacks--*/
 
 .details__descr-feedbacks {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  max-width: 1013px;
+  width: 100%;
 
   a {
     padding: 15px 35px 16px;
   }
 }
+
+.details__descr-feedbacks_inner {
+  padding: 32px 32px 30px 35px;
+  border-radius: 15px;
+  background-color: rgb(246, 244, 248);
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.details__descr-feedbacks-title {
+  font-family: 'SF UI Display Bold';
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.65em;
+  color: $def-title-color;
+  margin-bottom: 18px;
+}
+
+.details__descr-feedbacks-text {
+  color: $grey-font-color;
+  font-size: 16px;
+}
+
+.details__descr-feedbacks-rating {
+  position: absolute;
+  top: 33px;
+  right: 32px;
+}
+
+.details__descr-feedbacks-btn {
+  text-align: right;
+}
+
+
+
 
 /*---------related-----------*/
 .related {
@@ -2606,6 +2642,7 @@
 .orders-profiles {
   padding-top: 50px;
 }
+
 .orders-profiles__empty {
   font-size: 22px;
   color: $grey-font-color;
@@ -2867,6 +2904,7 @@
   font-size: 12px;
   line-height: 1.5em;
   color: #b8b7b7;
+
   a {
     color: #75d6e4;
   }
@@ -3041,6 +3079,7 @@
 .contacts__contacts_top-phone,
 .contacts__contacts_top-email {
   display: inline;
+
   a {
     position: relative;
 
@@ -3093,7 +3132,7 @@
 }
 
 .contacts__contacts_bottom-contact {
-  margin-right: 77px;
+  margin-right: 50px;
 }
 
 .contacts__contacts_bottom-address,
@@ -3137,9 +3176,7 @@
   display: flex;
 }
 
-.contacts__payment-methods_title,
-.contacts__payment-methods_cash,
-.contacts__payment-methods_mastercard {
+.contacts__payment-methods_title {
   margin-right: 14px;
 }
 
@@ -3148,7 +3185,6 @@
 }
 
 .contacts__payment-methods_content {
-  /*display: flex;*/
   position: relative;
   padding-right: 124px;
 
@@ -3179,5 +3215,331 @@
 .contacts__contacts_requisites-list {
   color: #b2b0b0;
 }
+
+.private__order-cancel {
+  padding-top: 52px;
+}
+
+.private__order-cancel_link,
+.private__order-status_link {
+  font-size: 14px;
+  color: #4ed7eb;
+  margin-bottom: 44px;
+
+  a {
+    position: relative;
+    padding-right: 36px;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      background-image: url('../img/arrow-right-blue.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 18px;
+      height: 13px;
+      right: 0;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+  }
+}
+
+.private__order-cancel_form {
+  color: $grey-font-color;
+  font-size: 16px;
+}
+
+.private__order-cancel_confirm-question {
+  margin-bottom: 24px;
+}
+
+.private__order-cancel_confirm-question-text {
+  span {
+    color: #4ed7eb;
+  }
+}
+
+.private__order-cancel_reason {
+  margin-bottom: 35px;
+
+  label,
+  textarea {
+    display: block;
+  }
+
+  label {
+    margin-bottom: 29px;
+  }
+
+  textarea {
+    max-width: 642px;
+    width: 100%;
+    height: 128px;
+    border-radius: 10px;
+    background-color: rgb(249, 248, 248);
+
+    outline: none;
+    resize: none;
+    border: none;
+
+    padding: 20px;
+
+    font-family: 'SF UI Display Regular';
+    font-weight: 400;
+    font-size: 16px;
+    color: $grey-font-color;
+  }
+}
+
+.private__order-cancel_btn-box {
+  button {
+    background-color: transparent;
+    border: 2px solid $btn-bg-color;
+    color: #54d9ec;
+    font-size: 14px;
+    position: relative;
+    padding: 12.34px 50px 12px 29.76px;
+
+    &:after {
+      position: absolute;
+      display: block;
+      font-family: "Flaticon";
+      content: "\f100";
+      right: 18px;
+      top: 51%;
+      transform: translate(0, -50%);
+    }
+  }
+}
+
+.private__order-status {
+
+}
+
+.private__order-status_link {
+  margin-bottom: 35px;
+}
+
+.private__order-status_form-box {
+
+}
+
+.private__order-status_form-container {
+  max-width: 852px;
+  width: 100%;
+}
+
+.private__order-status_form-inner {
+  margin-bottom: 46px;
+}
+
+.private__order-status_form-header {
+  padding: 33px 20px 32px 80px;
+  background-color: rgb(163, 157, 217);
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.private__order-status_form-header_title {
+  font-size: 20px;
+  color: #ffffff;
+
+  .order-number {
+    font-family: 'SF UI Display Bold';
+    font-weight: 700;
+  }
+}
+
+.private__order-status_form-content {
+  padding: 40px 80px 52px;
+  background-color: rgba(246, 244, 248, 0.8);
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.private__order-status_form-pay {
+  padding-bottom: 34px;
+  border-bottom: 1px solid rgb(230, 221, 234);
+}
+
+.private__order-status_form-pay_title,
+.private__order-status_form-delivery_title {
+  font-family: 'SFUIDisplay-Light';
+  font-weight: 300;
+  font-size: 14px;
+  color: #aeaeae;
+  margin-bottom: 32px;
+}
+
+.private__order-status_form-pay_sum,
+.private__order-status_form-delivery_sum {
+  margin-bottom: 20px;
+}
+
+.private__order-status_form-pay_sum-title,
+.private__order-status_form-pay_method-title,
+.private__order-status_form-delivery_sum-title,
+.private__order-status_form-delivery_method-title,
+.private__order-status_form-delivery_shipment-title {
+  font-size: 16px;
+  color: $grey-font-color;
+  span {
+    font-family: 'SF UI Display Bold';
+    font-weight: 700;
+  }
+}
+
+.private__order-status_form-pay_method,
+.private__order-status_form-delivery_method {
+  display: flex;
+  justify-content: space-between;
+  max-width: 504px;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.private__order-status_form-pay_status,
+.private__order-status_form-delivery_status {
+  font-family: 'SF UI Display Bold';
+  font-weight: 700;
+  font-size: 10px;
+  color: #ffffff;
+  letter-spacing: .140em;
+  text-transform: uppercase;
+
+  span {
+    padding: 9.5px 20.56px;
+    background-color: rgb(250, 148, 156);
+    border-radius: 2em;
+  }
+}
+
+.private__order-status_form-delivery_status {
+  span {
+    padding: 9.5px 16.88px;
+  }
+}
+
+.private__order-status_form-change-pay-method {
+  font-size: 14px;
+  color: #4ed7eb;
+
+  a {
+    position: relative;
+    padding-right: 20px;
+
+    &:after {
+      content: "\f101";
+      font-family: Flaticon;
+      font-size: 10px;
+      color: #4ed7eb;
+      position: absolute;
+      right: 0;
+      top: 62%;
+      transform: translate(0, -50%);
+    }
+  }
+}
+
+.private__order-status_form-delivery {
+  padding-top: 34px;
+}
+
+.private__order-status_form-btn-box {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.private__order-status_form-btn_left {
+  display: flex;
+}
+
+.private__order-status_form-btn_details-order {
+  margin-right: 25px;
+
+  a {
+    padding: 14.17px 27.91px;
+  }
+}
+
+.private__order-status_form-btn_repeat-order {
+  a {
+    position: relative;
+    padding: 12.17px 55px 12.17px 25.86px;
+    background-color: transparent;
+    color: #54d9ec;
+    border: 2px solid #54d9ec;
+
+    &:after {
+      content: "\f10c";
+      font-family: "Flaticon";
+      font-size: 18px;
+      position: absolute;
+      display: block;
+      right: 17px;
+      top: 50%;
+      transform: translate(0, -50%) scale(-1, 1) rotate(35deg);
+    }
+  }
+}
+
+.private__order-status_form-btn_cancel-order {
+  a {
+    position: relative;
+    padding: 12.17px 55px 12.17px 24.77px;
+    background-color: transparent;
+    color: #54d9ec;
+    border: 2px solid #54d9ec;
+
+    &:after {
+      content: "\f100";
+      font-family: "Flaticon";
+      font-size: 14px;
+      position: absolute;
+      display: block;
+      right: 18px;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+  }
+}
+
+/*-----details__descr-item-----*/
+.details__descr_docs {
+
+}
+
+.details__descr_docs-link {
+  font-size: 16px;
+  color: #2dcae5;
+  margin-bottom: 66px;
+
+  a {
+    position: relative;
+    padding-left: 84px;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      background-image: url('../img/pdf-doc.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      left: 0;
+      top: 50%;
+      transform: translate(0, -50%);
+      width: 53px;
+      height: 55px;
+    }
+  }
+
+
+}
+
+
 
 @import "media";

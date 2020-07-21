@@ -519,6 +519,23 @@
       padding-bottom: 5px;
     }
   }
+
+  .contacts__contacts_bottom {
+    display: block;
+  }
+
+  .contacts__contacts_bottom-address,
+  .contacts__contacts_bottom-work-time {
+    margin-bottom: 20px;
+  }
+
+  .private__order-status_form-btn_left {
+    display: block;
+  }
+  .private__order-status_form-btn_details-order {
+    margin: 0 0 25px 0;
+  }
+
 }
 
 @media screen and (max-width: 1024px) {
@@ -642,10 +659,13 @@
       width: 100%;
       padding: 0 0 80px;
     }
+  }
 
-    .footer__map {
-      max-width: 100%;
-    }
+  .footer__map {
+    max-width: 100%;
+  }
+  .contacts__map {
+    max-width: 95%;
   }
 
   .footer__copyrights {
@@ -790,9 +810,7 @@
   }
 
   .private__content_container {
-    grid-template-areas:
-            'private__content'
-            'private__logout';
+    grid-template-areas: 'private__content' 'private__logout';
     grid-template-columns: 610px;
     row-gap: 59px;
   }
@@ -821,6 +839,15 @@
 
   .subscribes {
     padding-top: 0;
+  }
+
+  .private__order-cancel {
+    padding-top: 0;
+  }
+  .private__order-cancel_reason {
+    textarea {
+      width: 95%;
+    }
   }
 }
 
@@ -1416,6 +1443,67 @@
       width: 300px;
     }
   }
+
+  .contacts__contacts_top-phone {
+    display: block;
+    margin: 0 0 20px 0;
+  }
+
+  .contacts__payment-methods {
+    display: block;
+  }
+
+  .contacts__payment-methods_title {
+    margin: 0 0 14px 0;
+  }
+
+  .contacts__payment-methods_content {
+
+    .mastercard {
+      left: 100px;
+    }
+
+    .visa {
+      left: 160px;
+    }
+  }
+
+  .private__order-status_form-btn-box {
+    display: block;
+  }
+
+  .private__order-status_form-btn_left {
+    margin-bottom: 25px;
+  }
+
+  .private__order-status_form-btn_cancel-order {
+    a {
+      padding: 12.17px 64px 12.17px 25.69px;
+    }
+  }
+
+  .private__order-status_form-header {
+    padding: 30px 20px;
+    line-height: 1.7em;
+  }
+
+  .private__order-status_form-content {
+    padding: 40px 20px 52px;
+  }
+
+  .private__order-status_form-pay_method,
+  .private__order-status_form-delivery_method {
+    display: block;
+  }
+
+  .private__order-status_form-delivery_method-title,
+  .private__order-status_form-pay_method-title {
+    margin-bottom: 10px;
+  }
+
+  .private__order-status_form-container {
+    max-width: 300px;
+  }
 }
 
 @media screen and (max-width: 648px) {
@@ -1495,14 +1583,14 @@
   .footer__top {
     margin-bottom: 120px;
     padding: 0;
+  }
 
-    .footer__map {
-      min-height: 250px;
-    }
-
-    .ymaps-2-1-76-map {
-      height: 250px !important;
-    }
+  .contacts__map,
+  .footer__map {
+    min-height: 250px;
+  }
+  .ymaps-2-1-76-map {
+    height: 250px !important;
   }
 
   .search-bar {
@@ -1572,6 +1660,7 @@
     input {
       width: 300px;
     }
+
     br {
       display: none;
     }

@@ -425,25 +425,35 @@ function loginClosePopup(e) {
 }
 
 /*--------------map-------------*/
-var myMap;
+var myMap, myMap2;
 
 // Дождёмся загрузки API и готовности DOM.
 ymaps.ready(init);
 
 function init() {
-    var myMap = new ymaps.Map("map", {
-        center: [55.673336, 37.633401],
-        zoom: 15
-    }, {
-        searchControlProvider: 'yandex#search'
-    });
-
-    myMap.geoObjects
-        .add(new ymaps.Placemark([55.673336, 37.633401], {
+    let center = [55.673336, 37.633401],
+        icon = {
             preset: 'islands#icon',
             iconColor: '#0095b6'
-        }));
+        },
 
+        coordinates = {
+            center: center,
+            zoom: 15
+        },
+        searchControlProvider = {
+            searchControlProvider: 'yandex#search'
+        };
+
+    let myMap = new ymaps.Map("map", coordinates, searchControlProvider),
+        myMap2 = new ymaps.Map("map2", coordinates, searchControlProvider);
+
+    let myPlacemark = new ymaps.Placemark(center, icon),
+        myPlacemark2 = new ymaps.Placemark(center, icon);
+
+    myMap.geoObjects.add(myPlacemark);
+
+    myMap2.geoObjects.add(myPlacemark2);
 }
 
 function onSubmit(token) {
@@ -458,3 +468,13 @@ function onClick(e) {
         });
     });
 }
+
+/*----captcha----*/
+var onloadCallback = function() {
+    var divcaptcha = document.getElementsByClassName('g-recaptcha');
+    for (var i = 0; i < divcaptcha.length; i++) {
+        grecaptcha.render(divcaptcha[i], {
+            'sitekey': '6Lf6KKgZAAAAAACjlC-jiKaHjT5rU0UgH1hkl2aF'
+        });
+    }
+};

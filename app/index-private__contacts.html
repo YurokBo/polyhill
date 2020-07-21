@@ -176,7 +176,11 @@
                                 <li><a href="#">Корзина</a></li>
                                 <li><a href="#">Подписки</a></li>
                                 <li><a href="#">Контакты</a></li>
-                                <li><a href="#" class="login-out">Выйти</a></li>
+                                <li>
+                                    <div class="login-out-box" data-da="private__logout,0,1024">
+                                        <a href="#" class="login-out">Выйти</a>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -205,7 +209,7 @@
                                         <a href="#">info@polihill.ru</a>
                                     </div>
                                 </div>
-                                <div class="contacts__map">
+                                <div class="contacts__map" id="map2">
 
                                 </div>
                                 <div class="contacts__contacts_bottom">
@@ -226,12 +230,8 @@
                                             <div class="contacts__payment-methods_cash">
                                                 Наличные
                                             </div>
-                                            <div class="contacts__payment-methods_mastercard">
-                                                <img src="img/mastercard.png" alt="mastercard" class="mastercard">
-                                            </div>
-                                            <div class="contacts__contacts_bottom-payment-methods-visa">
-                                                <img src="img/visa.png" alt="visa" class="visa">
-                                            </div>
+                                            <img src="img/mastercard.png" alt="mastercard" class="mastercard">
+                                            <img src="img/visa.png" alt="visa" class="visa">
                                         </div>
                                     </div>
                                 </div>
@@ -241,7 +241,7 @@
                                     </div>
                                     <div class="contacts__contacts_requisites-list">
                                         <ul>
-                                            <li>ИП  Кузнецов Эдуард Олегович (ИНН 503012670175)</li>
+                                            <li>ИП Кузнецов Эдуард Олегович (ИНН 503012670175)</li>
                                             <li>ОГРН 319774600360324</li>
                                             <li>Рас. счет: №40802810101500050772</li>
                                             <li>ТОЧКА ПАО БАНКА "ФК ОТКРЫТИЕ"</li>
@@ -254,6 +254,7 @@
                         </div>
                     </div>
                 </div>
+                <div class="private__logout"></div>
             </div>
         </div>
     </div>
