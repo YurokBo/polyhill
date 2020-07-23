@@ -470,7 +470,7 @@ function onClick(e) {
 }
 
 /*----captcha----*/
-var onloadCallback = function() {
+var onloadCallback = function () {
     var divcaptcha = document.getElementsByClassName('g-recaptcha');
     for (var i = 0; i < divcaptcha.length; i++) {
         grecaptcha.render(divcaptcha[i], {
@@ -478,3 +478,4 @@ var onloadCallback = function() {
         });
     }
 };
+

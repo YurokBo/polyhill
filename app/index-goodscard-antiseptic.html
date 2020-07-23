@@ -270,7 +270,7 @@
     <div class="container">
         <div class="details__content">
             <div class="details__btn-list">
-                <div class="details__btn-item &lt;!&ndash;details__btn-item-active&ndash;&gt;">Описание</div>
+                <div class="details__btn-item details__btn-item-active">Описание</div>
                 <div class="details__btn-item">Характеристики</div>
                 <div class="details__btn-item">Документы</div>
                 <div class="details__btn-item">Задать вопрос</div>
@@ -278,7 +278,7 @@
                 <div class="details__btn-item">Отзывы</div>
             </div>
             <div class="details__descr-list">
-                <div class="details__descr-item &lt;!&ndash;details__descr-item-active&ndash;&gt;">
+                <div class="details__descr-item details__descr-item-active">
                     <div class="details__descr-text">
                         Рецептура рекомендована к применению
                         Всемирной организацией Здравоохранения
@@ -305,7 +305,14 @@
                     </ul>
                 </div>
                 <div class="details__descr-item">
-
+                    <div class="details__descr_docs">
+                        <div class="details__descr_docs-link">
+                            <a href="#">Инструкция использования товара от 20.03.20.pdf</a>
+                        </div>
+                        <div class="details__descr_docs-link">
+                            <a href="#">ГОСТ от 27.12.1989.pdf</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="details__descr-item">
                     <div class="details__descr-item_questions">
@@ -367,8 +374,22 @@
                 </div>
                 <div class="details__descr-item">
                     <div class="details__descr-feedbacks">
-                        <div class="details__descr-feedbacks-text">
-                            У данного товара нет отзывов. Станьте первым, кто оставил отзыв об этом товаре!
+                        <div class="details__descr-feedbacks_inner">
+                            <div class="details__descr-feedbacks-title">
+                                Кирилл
+                            </div>
+                            <div class="details__descr-feedbacks-text">
+                                У данного товара нет отзывов. Станьте первым, кто оставил отзыв об этом товаре!
+                            </div>
+                            <div class="details__descr-feedbacks-rating">
+                                <div class="rating">
+                                    <div class="rating-item rating-item-active" data-rate="1"></div>
+                                    <div class="rating-item" data-rate="2"></div>
+                                    <div class="rating-item" data-rate="3"></div>
+                                    <div class="rating-item" data-rate="4"></div>
+                                    <div class="rating-item" data-rate="5"></div>
+                                </div>
+                            </div>
                         </div>
                         <div class="details__descr-feedbacks-btn default-btn">
                             <a href="#">оставить отзыв</a>

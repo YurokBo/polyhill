@@ -390,6 +390,7 @@ h1, h2, h3, h4, h5, h6 {
 .login-popup__password,
 .password-recovery__e-mail {
   position: relative;
+
   label,
   input {
     display: block;
@@ -565,6 +566,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 304px;
   height: 78px;
 }
+
 .g-recaptcha {
   width: 304px;
   height: 78px;
@@ -581,9 +583,124 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  border:none !important;
+  border: none !important;
   -webkit-text-fill-color: inherit !important;
   -webkit-box-shadow: 0 0 0px 1000px #FFFFFF inset;
   transition: background-color 5000s ease-in-out 0s;
 
+}
+
+
+/*  swim-block  */
+.swim-block {
+  position: -webkit-sticky;
+  position: sticky;
+  float: right;
+  top: 0;
+  right: 0;
+
+  max-width: 357px;
+  width: 100%;
+}
+
+.swim-block__title-box {
+  padding: 31px 0 34px;
+  background-color: rgb(163, 157, 217);
+
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+
+  color: #ffffff;
+}
+
+.swim-block__container {
+  max-width: 280px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.swim-block__title-box_inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.swim-block__title {
+  font-family: 'SF UI Display Bold';
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: .042em;
+}
+
+.change-btn {
+  font-family: 'SFUIDisplay-Light';
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+.swim-block__content {
+  padding: 63px 0 41px;
+
+  background-color: rgba(246, 244, 248, .8);
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.swim-block__content-inner {
+  padding-bottom: 55px;
+
+  max-width: 322px;
+  width: 100%;
+  border-bottom: 1px solid rgb(230, 221, 234);
+  margin: 0 auto;
+}
+
+.swim-block__goods-sum,
+.swim-block__goods-tax,
+.swim-block__goods-delivery {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: 'SFUIDisplay-Light';
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: .045em;
+  color: $grey-font-color;
+
+  .sum-box,
+  .tax,
+  .delivery-price {
+    font-family: 'SF UI Display Medium';
+    font-weight: 500;
+  }
+}
+
+.swim-block__goods-sum,
+.swim-block__goods-tax {
+  margin-bottom: 30px;
+}
+
+.swim-block__content-total {
+  padding: 35px 0 0;
+}
+
+.swim-block__content-total_inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: 'SF UI Display Bold';
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: .042em;
+}
+
+.swim-block__total-text {
+  color: #a2a1ac;
+}
+
+.total-sum-box {
+  color: #7b798c;
 }

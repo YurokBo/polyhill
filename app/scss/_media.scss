@@ -536,6 +536,9 @@
     margin: 0 0 25px 0;
   }
 
+  .swim-block {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -1104,6 +1107,21 @@
       padding: 15px 50px 15px 15px;
     }
   }
+
+  .ordering__item_info-block {
+    display: none;
+  }
+
+  .goods-img {
+    margin-right: 7px;
+  }
+
+  .order-filled__item_delivery-icon,
+  .order-filled__delivery-type-title-box {
+    margin-right: 49px;
+  }
+
+
 }
 
 @media screen and (max-width: 716px) {
@@ -1504,6 +1522,55 @@
   .private__order-status_form-container {
     max-width: 300px;
   }
+
+  .ordering__item_destination_location {
+    display: block;
+  }
+
+  .ordering__item_destination_description {
+    padding-top: 0;
+  }
+
+  .ordering__item_destination_location-label-box {
+    input {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  .ordering__item_destination_index-btn-box {
+    display: block;
+
+    input {
+      width: 100%;
+      margin-right: 0;
+    }
+
+    .ordering__item_btn {
+      margin-top: 0;
+    }
+
+    .ordering__item_destination_index {
+      margin-bottom: 25px;
+    }
+  }
+
+  .ordering__form_btn-box {
+    padding: 0;
+  }
+
+  .ordering__item {
+
+    &:last-child {
+      .ordering__item_content {
+        padding: 0 36px 55px;
+      }
+    }
+  }
+
+  .order-filled__item_delivery {
+    align-items: center;
+  }
 }
 
 @media screen and (max-width: 648px) {
@@ -1514,6 +1581,17 @@
 
     .header__profile-registration {
       padding-left: 9px;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .payer__radio {
+    display: block;
+
+    &:first-child {
+      margin-right: 0;
+      margin-bottom: 24px;
     }
   }
 }
@@ -1665,6 +1743,34 @@
       display: none;
     }
   }
+
+  .ordering__item_btn-box {
+    display: block;
+  }
+
+  .ordering__item_btn-back {
+    margin-bottom: 35px;
+  }
+
+  .ordering__form_btn-box_inner {
+    display: block;
+  }
+
+  .ordering__item_content {
+    padding: 55px 35px 57px;
+  }
+
+  .order-filled__item_delivery {
+    display: block;
+  }
+
+  .order-filled__item_delivery-icon,
+  .order-filled__delivery-type-title-box {
+    margin-right: 0;
+    margin-bottom: 23px;
+  }
+
+
 }
 
 @media screen and (max-width: 506px) {
@@ -1759,7 +1865,6 @@
             max-width: 94px;
           }
         }
-
       }
     }
 
@@ -1800,11 +1905,6 @@
   }
 
   .shoecover-certificate {
-
-
-    .shoecover-certificate__inner {
-
-    }
 
     .shoecover-certificate__content {
       padding: 55px 0 43px 0;
@@ -1994,6 +2094,42 @@
       height: 250px;
     }
   }
+
+  .ordering__item_type {
+    display: block;
+  }
+
+  .ordering__item_checkbox {
+    margin-bottom: 5px;
+  }
+
+  .order-filled__pay-type {
+    display: block;
+  }
+
+  .order-filled__pay-type-icon {
+    margin-right: 0;
+    margin-bottom: 23px;
+  }
+
+  .order-filled__customer {
+    span {
+      display: block;
+    }
+  }
+
+  .ordering__item_title-box {
+    display: block;
+  }
+
+  .ordering__item-title {
+    margin-bottom: 10px;
+  }
+
+  .change-btn {
+    margin-left: 50px;
+  }
+
 }
 
 @media screen and (max-width: 380px) {
@@ -2050,6 +2186,10 @@
     &:before {
       font-size: 18px;
     }
+  }
+
+  .ordering__title {
+    font-size: 40px;
   }
 }
 
