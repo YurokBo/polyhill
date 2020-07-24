@@ -4,14 +4,6 @@
   }
 }
 
-@media screen and (max-width: 1900px) {
-  .sidebar {
-    .sidebar__menu {
-      padding: 87px 25px 49px 43px;
-    }
-  }
-}
-
 @media screen and (max-width: 1616px) {
   .manual__image {
     img {
@@ -21,14 +13,6 @@
 
     .manual__pdf-about {
       right: -88px;
-    }
-  }
-}
-
-@media screen and (max-width: 1535px) {
-  .sidebar {
-    .sidebar__menu {
-      padding: 87px 25px 40px 43px;
     }
   }
 }
@@ -46,25 +30,7 @@
   }
 }
 
-@media screen and (max-width: 1480px) {
-
-}
-
-@media screen and (max-width: 1386px) {
-  .sidebar {
-    .sidebar__menu {
-      padding: 87px 25px 30px 43px;
-    }
-  }
-}
-
 @media screen and (max-width: 1360px) {
-
-  .sidebar {
-    .sidebar__menu {
-      padding: 87px 25px 35px 43px;
-    }
-  }
 
   .header__address {
     display: none;
